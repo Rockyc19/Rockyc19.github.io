@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
 
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Reddit Mono", monospace;
     background-color: #191919;
     color: #fff;
     padding: 20px;
@@ -13,19 +13,19 @@ body {
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Reddit Mono", monospace;
     box-sizing: border-box;
 }
 
 /* Example of a specific element with the same font */
 h1, h2, h3, h4, h5, h6, p {
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Reddit Mono", monospace;
 }
 
 /* Media query to ensure font on mobile devices */
 @media only screen and (max-width: 768px) {
     body {
-        font-family: 'Press Start 2P', cursive;
+        font-family: "Reddit Mono", monospace;
     }
 }
 
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 100%;
     padding: 100px 0px;
     background-color: #191919;
-    font-family: "Press Start 2P", cursive;
+   
 }
 
 .about .main, .section2 .section3 .main {
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-family: "Press Start 2P", cursive;
+   
 
 }
 
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .about-text, .section2 .about-text {
     width: 550px;
-    font-family: "Press Start 2P", cursive;
+   
 }
 
 .about-text h2, .section2 .about-text h2 {
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 35px;
     text-transform: capitalize;
     margin-bottom: 20px;
-    font-family: "Press Start 2P", cursive;
+   
 
 }
 
@@ -75,7 +75,6 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 22px;
     margin-bottom: 25px;
     text-transform: capitalize;
-    font-family: "Press Start 2P", cursive;
 
 }
 
@@ -85,7 +84,6 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 28px;
     font-size: 18px;
     margin-bottom: 45px;
-    font-family: "Press Start 2P", cursive;
 }
 
 button#see-more {
@@ -110,39 +108,38 @@ button#see-more:hover {
     .about .main, .section2 .section3 .main {
         flex-direction: column; /* Verticale opstelling */
         align-items: center; /* Gecentreerd uitlijnen */
-        font-family: "Press Start 2P", cursive;
-    }
+        font-family: "Reddit Mono", monospace;    }
 
     .about img {
         width: 80%; /* Aangepaste breedte */
         max-width: 1300px; /* Maximale breedte voor responsiviteit */
         margin-bottom: 20px; /* Ruimte onder de foto */
-        font-family: "Press Start 2P", cursive;
+      
     }
 
     .about-text, .section2 .about-text {
         width: 80%; /* Aangepaste breedte */
         max-width: 600px; /* Maximale breedte voor responsiviteit */
-        font-family: "Press Start 2P", cursive;
+        
     }
 
     .about-text h2, .section2 .about-text h2 {
         font-size: 40px; /* Aangepaste lettergrootte */
         margin-bottom: 15px; /* Minder ruimte onder de naam */
-        font-family: "Press Start 2P", cursive;
+       
     }
 
     .about-text h5, .section2 .about-text h5 {
         font-size: 18px; /* Aangepaste lettergrootte */
         margin-bottom: 20px; /* Minder ruimte onder de titel */
-        font-family: "Press Start 2P", cursive;
+       
     }
 
     .about-text p, .section2 .about-text p {
         font-size: 26px; /* Aangepaste lettergrootte */
         line-height: 24px; /* Aangepaste regelhoogte */
         margin-bottom: 30px; /* Minder ruimte onder de tekst */
-        font-family: "Press Start 2P", cursive;
+    
     }
 
     button#see-more {
@@ -157,7 +154,7 @@ button#see-more:hover {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Adjust this value if needed */
-    font-family: "Press Start 2P", cursive;
+
 
 }
   
@@ -170,7 +167,7 @@ button#see-more:hover {
     .cv {
         margin-top: 50px; /* Voeg hier eventueel de gewenste marge toe */
         margin-right: -130px; /* Voeg hier eventueel de gewenste marge toe */
-        font-family: "Press Start 2P", cursive;
+      
 
     }
 }
@@ -216,7 +213,7 @@ button#see-more:hover {
   .text-box {
     margin-left: 44vw;
     margin-top: 42vh;
-    font-family: "Press Start 2P", cursive;
+   
 
 }
 
@@ -263,14 +260,14 @@ button#see-more:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    font-family: "Press Start 2P", cursive;
+   
 
 }
 
 .section {
     margin-top: 50px;
     text-align: center;
-    font-family: "Press Start 2P", cursive;
+  
 
 }
 
@@ -278,7 +275,7 @@ button#see-more:hover {
     font-size: 56px;
     margin-bottom: 60px;
     color: #fff;
-    font-family: "Press Start 2P", cursive;
+ 
 
 }
 
@@ -287,7 +284,7 @@ button#see-more:hover {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    font-family: "Press Start 2P", cursive;
+ 
 
 }
 
@@ -302,7 +299,7 @@ button#see-more:hover {
     width: 100%;
     /* text-align: left; */
     transition: transform 0.3s;
-    font-family: "Press Start 2P", cursive;
+  
 
 }
 
@@ -314,7 +311,7 @@ button#see-more:hover {
     font-size: 24px;
     margin-bottom: 10px;
     color: #fff;
-    font-family: "Press Start 2P", cursive;
+ 
 
 }
 
@@ -322,7 +319,7 @@ button#see-more:hover {
     font-size: 16px;
     margin-bottom: 15px;
     color: #fff;
-    font-family: "Press Start 2P", cursive;
+   
 
 }
 
@@ -331,7 +328,7 @@ button#see-more:hover {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "Press Start 2P", cursive;
+  
 
 }
 
@@ -344,7 +341,7 @@ button#see-more:hover {
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
-    font-family: "Press Start 2P", cursive;
+ 
 
 }
 
@@ -356,7 +353,7 @@ button#see-more:hover {
 h4 {
     color: red;
     font-size: 14px;
-    font-family: "Press Start 2P", cursive;
+  
 
 }
 
@@ -376,7 +373,7 @@ h4 {
 
 .about-text {
     text-align: center;
-    font-family: "Press Start 2P", cursive;
+    
 
 }
 
