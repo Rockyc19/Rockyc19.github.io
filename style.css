@@ -126,7 +126,7 @@ button#see-more:hover {
 }
 
 /* Mediaquery voor responsief ontwerp */
-@media only screen and (max-width: 708px) {
+@media only screen and (max-width: 508px) {
     .cv {
         margin-top: 50px; /* Voeg hier eventueel de gewenste marge toe */
         margin-right: -130px; /* Voeg hier eventueel de gewenste marge toe */
