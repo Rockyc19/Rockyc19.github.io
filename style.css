@@ -1,0 +1,378 @@
+/* Algemene stijlen */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", cursive;
+    box-sizing: border-box;
+}
+
+/* Overige stijlen hieronder */
+
+.about, .section2 .section3 {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #191919;
+}
+
+.about .main, .section2 .section3 .main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about img {
+    height: auto;
+    width: 430px;
+}
+
+.about-text, .section2 .about-text {
+    width: 550px;
+}
+
+.about-text h2, .section2 .about-text h2 {
+    color: white;
+    font-size: 55px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5, .section2 .about-text h5 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-text p, .section2 .about-text p {
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    font-family: "Press Start 2P", cursive;
+}
+
+button#see-more {
+    background-color: #00703c; /* Groene achtergrondkleur */
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button#see-more:hover {
+    background-color: transparent;
+    border: 2px solid rgb(4, 65, 17);
+    cursor: pointer;
+}
+
+/* Mediaquery voor responsief ontwerp */
+@media only screen and (max-width: 768px) {
+    .about .main, .section2 .section3 .main {
+        flex-direction: column; /* Verticale opstelling */
+        align-items: center; /* Gecentreerd uitlijnen */
+    }
+
+    .about img {
+        width: 80%; /* Aangepaste breedte */
+        max-width: 300px; /* Maximale breedte voor responsiviteit */
+        margin-bottom: 20px; /* Ruimte onder de foto */
+    }
+
+    .about-text, .section2 .about-text {
+        width: 80%; /* Aangepaste breedte */
+        max-width: 600px; /* Maximale breedte voor responsiviteit */
+    }
+
+    .about-text h2, .section2 .about-text h2 {
+        font-size: 40px; /* Aangepaste lettergrootte */
+        margin-bottom: 15px; /* Minder ruimte onder de naam */
+    }
+
+    .about-text h5, .section2 .about-text h5 {
+        font-size: 18px; /* Aangepaste lettergrootte */
+        margin-bottom: 20px; /* Minder ruimte onder de titel */
+    }
+
+    .about-text p, .section2 .about-text p {
+        font-size: 16px; /* Aangepaste lettergrootte */
+        line-height: 24px; /* Aangepaste regelhoogte */
+        margin-bottom: 30px; /* Minder ruimte onder de tekst */
+    }
+
+    button#see-more {
+        margin-top: 20px; /* Ruimte boven de knop */
+    }
+}
+
+/* //section 2 */
+
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this value if needed */
+}
+  
+.cv {
+    text-align: center;
+}
+
+/* Mediaquery voor responsief ontwerp */
+@media only screen and (max-width: 768px) {
+    .cv {
+        margin-top: 50px; /* Voeg hier eventueel de gewenste marge toe */
+        margin-right: -130px; /* Voeg hier eventueel de gewenste marge toe */
+    }
+}
+
+/* soccer*/
+.soccer {
+    background: url(http://upload.wikimedia.org/wikipedia/en/e/ec/Soccer_ball.svg);
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    -webkit-animation:roll 4.5s infinite;
+    -moz-animation:roll 4.5s infinite;
+    animation:roll 4.5s infinite;
+}
+  
+@-moz-keyframes roll {  
+    0% {left:0px; -webkit-transform: rotate(-260deg);}
+    50% {left:400px; -webkit-transform: rotate(260deg);}
+    100% {left:0px; -webkit-transform: rotate(-260deg);}
+}
+@-webkit-keyframes roll { 
+    0% {left:0px; -webkit-transform: rotate(-260deg);}
+    50% {left:400px; -webkit-transform: rotate(260deg);}
+    100% {left:0px; -webkit-transform: rotate(-260deg);}
+}
+  
+@keyframes roll { 
+    0% {left:0px; -webkit-transform: rotate(-260deg);}
+    50% {left:400px; -webkit-transform: rotate(260deg);}
+    100% {left:0px; -webkit-transform: rotate(-260deg);}
+}
+  
+.world-cup {
+    color: #82AE6F;
+    text-align: center;
+}
+
+  /*  */
+
+  /*  */
+
+  .text-box {
+    margin-left: 44vw;
+    margin-top: 42vh;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 56px;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.project-box {
+    position: relative;
+    background-color: #00703c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+    /* text-align: left; */
+    transition: transform 0.3s;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+.project-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-box p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.project-box .btn-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.project-box a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #00703c;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-box a:hover {
+    background-color: #005e33;
+    transform: translateY(-3px);
+}
+
+h4 {
+    color: red;
+    font-size: 14px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #019f55;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #01763e;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.languages img {
+    margin: 40px;
+    width: 100px;
+    height: auto;
+}
+
+.taal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+    background-color: #191919;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper > div {
+    margin: 0 10px;
+}
+
+.icon-facebook,
+.icon-twitter,
+.icon-instagram,
+.icon-github,
+.icon-linkedin {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.wrapper > div:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
