@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestPlugNL | Tayfun</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="clothes.css">
+</head>
+<body>
+    <div class="body_items">
+        <div class="item_1">
+            <img src="images/6.png" alt="">
+        </div>
+        <!-- <div class="item_2">
+            <img src="images/image_123650291.JPG" alt="">
+        </div> -->
+        <!-- <div class="just_do_it">
+            <p>Best Plug NL</p>
+        </div> -->
+    </div>    
+    <div class="container">
+        <nav>
+            <div class="left_nav">
+                <div class="nav_logo">
+                    <img src="images/image_123650291.JPG" alt="">
+                </div>
+                <div class="nav_menu">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="link">Home</a>
+                            <div class="link_border"></div>
+                        </li>
+                        <li>
+                            <a href="./clothes.html" class="link">Clothes</a>
+                            <div class="link_border"></div>
+                        </li>
+                        <li>
+                            <a href="#" class="link">Reviews</a>
+                            <div class="link_border"></div>
+                        </li>
+                        <li>
+                            <a href="#" class="link">Contact</a>
+                            <div class="link_border"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right_nav">
+                <div class="dropdown">
+                    <div class="menu_bars" onclick="myMenuFunction()">
+                        <div class="menu_bars_btn">
+                          <img src="images/bar.png" class="bar_1">
+                          <img src="images/bar.png" class="bar_2">
+                        </div>
+                        <div class="nav_dropdown_menu" id="navDropdownMenu">
+                            <ul>
+                                <li>
+                                    <a href="./index.html" class="link">Home</a>
+                                    <div class="link_border"></div>
+                                </li>
+                                <li>
+                                    <a href="./clothes.html" class="link">Clothes</a>
+                                    <div class="link_border"></div>
+                                </li>
+                                <li>
+                                    <a href="#" class="link">Reviews</a>
+                                    <div class="link_border"></div>
+                                </li>
+                                <li>
+                                    <a href="#" class="link">Contact</a>
+                                    <div class="link_border"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+      
+
+
+        <div class="container1">
+            <div class="title">PRODUCT LIST</div>
+            <div class="listProduct">
+    
+            </div>
+        </div>
+    
+        
+    
+        <script>
+            //Important note: If you have downloaded the code
+            // but still encounter errors when running the program,
+             //    please watch the video at this link because
+            // I have shown you how to run the project properly.
+            // https://www.youtube.com/watch?v=okyfcpZfPAU&t=142s
+            let products = null;
+            // get datas from file json
+            fetch('products.json')
+                .then(response => response.json())
+                .then(data => {
+                    products = data;
+                    addDataToHTML();
+            })
+    
+            function addDataToHTML(){
+        // remove datas default from HTML
+            let listProductHTML = document.querySelector('.listProduct');
+    
+            // add new datas
+            if(products != null) // if has data
+            {
+                products.forEach(product => {
+                    let newProduct = document.createElement('a');
+                    newProduct.href = '/detail.html?id=' + product.id;
+                    newProduct.classList.add('item');
+                    newProduct.innerHTML = 
+                    `<img src="${product.image}" alt="">
+                    <h2>${product.name}</h2>
+                    <div class="price">$${product.price}</div>`;
+                    listProductHTML.appendChild(newProduct);
+    
+                });
+            }
+        }
+    
+        </script>
+
+
+    <footer>
+        <div class="site-copyright">
+            <p>Copyright 2024 © BestPlugNL. All right reserved. Made by Tayfun Cavdar</p>
+        </div>
+       </footer>
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navDropdownMenu");
+            if (i.className === "nav_dropdown_menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav_dropdown_menu";
+            }
+        }
+    </script>
+</body>
+</html>
