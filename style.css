@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Press Start 2P", cursive;
+}
+
 /* Overige stijlen hieronder */
 
 .about, .section2 .section3 {
@@ -135,7 +139,6 @@ button#see-more:hover {
     .cv {
         margin-top: 50px; /* Voeg hier eventueel de gewenste marge toe */
         margin-right: -130px; /* Voeg hier eventueel de gewenste marge toe */
-        
     }
 }
 
