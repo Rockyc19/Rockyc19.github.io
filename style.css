@@ -1,16 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Algemene stijlen */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #191919;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* General styles */
 * {
     margin: 0;
     padding: 0;
-    font-family: "Press Start 2P", cursive;
+    font-family: 'Press Start 2P', cursive;
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Press Start 2P", cursive;
+/* Example of a specific element with the same font */
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Press Start 2P', cursive;
 }
+
+/* Media query to ensure font on mobile devices */
+@media only screen and (max-width: 768px) {
+    body {
+        font-family: 'Press Start 2P', cursive;
+    }
+}
+
 
 /* Overige stijlen hieronder */
 
@@ -44,7 +62,7 @@ body {
 
 .about-text h2, .section2 .about-text h2 {
     color: white;
-    font-size: 55px;
+    font-size: 35px;
     text-transform: capitalize;
     margin-bottom: 20px;
     font-family: "Press Start 2P", cursive;
