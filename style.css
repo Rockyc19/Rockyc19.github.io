@@ -74,7 +74,7 @@ button#see-more:hover {
 }
 
 /* Mediaquery voor responsief ontwerp */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
     .about .main, .section2 .section3 .main {
         flex-direction: column; /* Verticale opstelling */
         align-items: center; /* Gecentreerd uitlijnen */
@@ -83,7 +83,7 @@ button#see-more:hover {
 
     .about img {
         width: 80%; /* Aangepaste breedte */
-        max-width: 300px; /* Maximale breedte voor responsiviteit */
+        max-width: 1300px; /* Maximale breedte voor responsiviteit */
         margin-bottom: 20px; /* Ruimte onder de foto */
     }
 
@@ -131,7 +131,7 @@ button#see-more:hover {
 }
 
 /* Mediaquery voor responsief ontwerp */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
     .cv {
         margin-top: 50px; /* Voeg hier eventueel de gewenste marge toe */
         margin-right: -130px; /* Voeg hier eventueel de gewenste marge toe */
