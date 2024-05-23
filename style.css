@@ -90,22 +90,26 @@ button#see-more:hover {
     .about-text, .section2 .about-text {
         width: 80%; /* Aangepaste breedte */
         max-width: 600px; /* Maximale breedte voor responsiviteit */
+        font-family: "Press Start 2P", cursive;
     }
 
     .about-text h2, .section2 .about-text h2 {
         font-size: 40px; /* Aangepaste lettergrootte */
         margin-bottom: 15px; /* Minder ruimte onder de naam */
+        font-family: "Press Start 2P", cursive;
     }
 
     .about-text h5, .section2 .about-text h5 {
         font-size: 18px; /* Aangepaste lettergrootte */
         margin-bottom: 20px; /* Minder ruimte onder de titel */
+        font-family: "Press Start 2P", cursive;
     }
 
     .about-text p, .section2 .about-text p {
         font-size: 16px; /* Aangepaste lettergrootte */
         line-height: 24px; /* Aangepaste regelhoogte */
         margin-bottom: 30px; /* Minder ruimte onder de tekst */
+        font-family: "Press Start 2P", cursive;
     }
 
     button#see-more {
@@ -131,6 +135,7 @@ button#see-more:hover {
     .cv {
         margin-top: 50px; /* Voeg hier eventueel de gewenste marge toe */
         margin-right: -130px; /* Voeg hier eventueel de gewenste marge toe */
+        
     }
 }
 
