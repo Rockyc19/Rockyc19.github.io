@@ -16,6 +16,7 @@ body {
     width: 100%;
     padding: 100px 0px;
     background-color: #191919;
+    font-family: "Press Start 2P", cursive;
 }
 
 .about .main, .section2 .section3 .main {
@@ -25,6 +26,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-family: "Press Start 2P", cursive;
+
 }
 
 .about img {
@@ -34,6 +37,8 @@ body {
 
 .about-text, .section2 .about-text {
     width: 550px;
+    font-family: "Press Start 2P", cursive;
+
 }
 
 .about-text h2, .section2 .about-text h2 {
@@ -41,6 +46,8 @@ body {
     font-size: 55px;
     text-transform: capitalize;
     margin-bottom: 20px;
+    font-family: "Press Start 2P", cursive;
+
 }
 
 .about-text h5, .section2 .about-text h5 {
@@ -49,6 +56,8 @@ body {
     font-size: 22px;
     margin-bottom: 25px;
     text-transform: capitalize;
+    font-family: "Press Start 2P", cursive;
+
 }
 
 .about-text p, .section2 .about-text p {
