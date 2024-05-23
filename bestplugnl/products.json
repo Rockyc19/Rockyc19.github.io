@@ -3,7 +3,7 @@
         "id": 1,
         "name":" YEEZY BLACK",
         "price": 200,
-        "image": "./bestplug/images/yeezy1.png", 
+        "image": "../bestplug/images/yeezy1.png", 
 
         "description": "Voeg ons toe op Snapchat Acprvtte of Instagram Bestplugnl. Bekijk onze kleren en zoek uit wat je wilt, Heb je je product gevonden? stuur een appje naar 0647900322."
     },
