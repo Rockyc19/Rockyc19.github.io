@@ -139,7 +139,7 @@
             window.location.href = "/";
         }
 
-        detail.querySelector('.image img').src = 'bestplug/images/' + thisProduct.image;
+        detail.querySelector('.image img').src = thisProduct.image;
         detail.querySelector('.name').innerText = thisProduct.name;
         detail.querySelector('.price').innerText = '$' + thisProduct.price;
         detail.querySelector('.description').innerText = '' + thisProduct.description;
