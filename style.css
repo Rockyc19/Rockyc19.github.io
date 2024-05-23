@@ -74,10 +74,11 @@ button#see-more:hover {
 }
 
 /* Mediaquery voor responsief ontwerp */
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 768px) {
     .about .main, .section2 .section3 .main {
         flex-direction: column; /* Verticale opstelling */
         align-items: center; /* Gecentreerd uitlijnen */
+        font-family: "Press Start 2P", cursive;
     }
 
     .about img {
