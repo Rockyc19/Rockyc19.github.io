@@ -14,6 +14,12 @@
         <div class="item_1">
             <img src="images/6.png" alt="">
         </div>
+        <!-- <div class="item_2">
+            <img src="images/image_123650291.JPG" alt="">
+        </div> -->
+        <!-- <div class="just_do_it">
+            <p>Best Plug NL</p>
+        </div> -->
     </div>    
     <div class="container">
         <nav>
@@ -74,52 +80,61 @@
             </div>
         </nav>
       
+
+
         <div class="container1">
             <div class="title">PRODUCT LIST</div>
             <div class="listProduct">
-                <!-- Producten worden hier ingevoegd -->
+    
             </div>
         </div>
     
-        <script>
-            let products = [
-                {
-                    "id": 1,
-                    "name":"YEEZY BLACK",
-                    "price": 200,
-                    "image": "../images/yeezy1.png",
-                    "description": "Voeg ons toe op Snapchat Acprvtte of Instagram Bestplugnl. Bekijk onze kleren en zoek uit wat je wilt, Heb je je product gevonden? stuur een appje naar 0647900322."
-                }
-                // Voeg hier meer producten toe indien nodig
-            ];
-            
-            function addDataToHTML(){
-                let listProductHTML = document.querySelector('.listProduct');
+        
     
-                if(products != null) {
-                    products.forEach(product => {
-                        let newProduct = document.createElement('div');
-                        newProduct.classList.add('item');
-                        newProduct.innerHTML = `
-                            <img src="${product.image}" alt="">
-                            <h2>${product.name}</h2>
-                            <div class="price">$${product.price}</div>
-                            <p>${product.description}</p>
-                        `;
-                        listProductHTML.appendChild(newProduct);
-                    });
-                }
+        <script>
+            //Important note: If you have downloaded the code
+            // but still encounter errors when running the program,
+             //    please watch the video at this link because
+            // I have shown you how to run the project properly.
+            // https://www.youtube.com/watch?v=okyfcpZfPAU&t=142s
+            let products = null;
+            // get datas from file json
+            fetch('products.json')
+                .then(response => response.json())
+                .then(data => {
+                    products = data;
+                    addDataToHTML();
+            })
+    
+            function addDataToHTML(){
+        // remove datas default from HTML
+            let listProductHTML = document.querySelector('.listProduct');
+    
+            // add new datas
+            if(products != null) // if has data
+            {
+                products.forEach(product => {
+                    let newProduct = document.createElement('a');
+                    newProduct.href = '/detail.html?id=' + product.id;
+                    newProduct.classList.add('item');
+                    newProduct.innerHTML = 
+                    `<img src="${product.image}" alt="">
+                    <h2>${product.name}</h2>
+                    <div class="price">$${product.price}</div>`;
+                    listProductHTML.appendChild(newProduct);
+    
+                });
             }
-            
-            addDataToHTML();
+        }
+    
         </script>
 
-        <footer>
-            <div class="site-copyright">
-                <p>Copyright 2024 © BestPlugNL. All right reserved. Made by Tayfun Cavdar</p>
-            </div>
-        </footer>
-    </div>
+
+    <footer>
+        <div class="site-copyright">
+            <p>Copyright 2024 © BestPlugNL. All right reserved. Made by Tayfun Cavdar</p>
+        </div>
+       </footer>
     <script>
         function myMenuFunction() {
             var i = document.getElementById("navDropdownMenu");
