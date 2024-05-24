@@ -143,21 +143,22 @@
         }
     
         function displayComparableProducts() {
-            if(products != null) {
-                const thisProduct = products.find(product => product.id == productId);
-                if(thisProduct && thisProduct.comparables) {
-                    const comparableContainer = document.querySelector('.listProduct');
-                    thisProduct.comparables.forEach(comparableId => {
-                        const comparableProduct = products.find(product => product.id == comparableId);
-                        if(comparableProduct) {
-                            const comparableElement = document.createElement('div');
-                            comparableElement.innerText = comparableProduct.name;
-                            comparableContainer.appendChild(comparableElement);
-                        }
-                    });
+    if(products != null) {
+        const thisProduct = products.find(product => product.id == productId);
+        if(thisProduct && thisProduct.comparables) {
+            const comparableContainer = document.querySelector('.listProduct');
+            thisProduct.comparables.forEach(comparableId => {
+                const comparableProduct = products.find(product => product.id == comparableId);
+                if(comparableProduct) {
+                    const comparableElement = document.createElement('div');
+                    comparableElement.innerText = comparableProduct.name;
+                    comparableContainer.appendChild(comparableElement);
                 }
-            }
+            });
         }
+    }
+}
+
     </script>
     
 
