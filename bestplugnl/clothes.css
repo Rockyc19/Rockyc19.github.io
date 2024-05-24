@@ -104,8 +104,6 @@ button {
     background-color: #2183a2;
 }
 
-
-
 @media (max-width: 1000px) {
     .content {
         width: 45%;
@@ -117,7 +115,6 @@ button {
         width: 100%;
     }
 }
-
 
 /* shoes detail css */
 
