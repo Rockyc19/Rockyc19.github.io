@@ -132,7 +132,7 @@
             let detail = document.querySelector('.detail');
             let listProduct = document.querySelector('.listProduct');
             let productId = new URLSearchParams(window.location.search).get('id');
-            let thisProduct = products.find(value => value.id == productId);
+            let thisProduct = products.filter(value => value.id == productId)[0];
     
             // If there is no product with id = productId, return to the home page
             if (!thisProduct) {
@@ -147,22 +147,17 @@
             detail.querySelector('.description').innerText = thisProduct.description;
     
             // Display comparable products
-            if (thisProduct.listProduct) {
-                thisProduct.listProduct.forEach(productId => {
-                    const product = products.find(product => product.id == productId);
-                    if (product) {
-                        const productElement = document.createElement('a');
-                        productElement.href = '/detail.html?id=' + product.id;
-                        productElement.classList.add('item');
-                        productElement.innerHTML = `
-                            <img src="images/${product.image}" alt="">
-                            <h2>${product.name}</h2>
-                            <div class="price">$${product.price}</div>`;
-                        listProduct.appendChild(productElement);
-                    }
-                });
-            }
-        }
+            (products.filter(value => value.id != productId)).forEach(product => {
+            let newProduct = document.createElement('a');
+            newProduct.href = '/detail.html?id=' + product.id;
+            newProduct.classList.add('item');
+            newProduct.innerHTML = 
+            `<img src="${product.image}" alt="">
+            <h2>${product.name}</h2>
+            <div class="price">$${product.price}</div>`;
+            listProduct.appendChild(newProduct);
+        });
+    }
     </script>
     
     
