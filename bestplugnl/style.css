@@ -12,14 +12,11 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    background: #efe4e4;
+
 }
 
-body {
-    background: #efe4e4;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-}
+
 
 .container {
     flex: 1;
@@ -173,23 +170,7 @@ ul li{
     font-family: 'Cascadia Code',sans-serif;
     font-weight: 500;
 }
-.shop_box{
-    display: flex;
-    align-items: flex-end;
-    gap: 50px;
-    height: 100%;
-    max-height: 35vh;
-}
-.shop_item_container{
-    position: relative;
-    background: #cfcfcf;
-    width: 200px;
-    height: 150px;
-    border-radius: 40px;
-    padding: 80px 20px 0 20px;
-    box-shadow: -5px 5px 10px rgba(0,0,0,0.2);
-    cursor: pointer;
-}
+
 .shoe_img_box .shoe_img{
     position: absolute;
     left: 50%;
@@ -280,6 +261,3 @@ footer {
     }
 }
 
-.shopping_cart_btn{
-    display: none;
-}
