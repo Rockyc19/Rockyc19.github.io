@@ -152,7 +152,7 @@
             // Display comparable products
             products.filter(value => value.id != productId).forEach(product => {
                 let newProduct = document.createElement('a');
-                newProduct.href = '/detail.html?id=' + product.id;
+                newProduct.href = '/bestplug/detail.html?id=' + product.id;
                 newProduct.classList.add('item');
                 newProduct.innerHTML = 
                 `<img src="images/${product.image}" alt="">
