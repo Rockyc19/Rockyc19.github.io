@@ -105,7 +105,7 @@
                 if(products != null) {
                     products.forEach(product => {
                         let newProduct = document.createElement('a');
-                        newProduct.href = 'bestplugnl/detail.html?id=' + product.id;
+                        newProduct.href = '/detail.html?id=' + product.id;
                         newProduct.classList.add('item');
                         newProduct.innerHTML = 
                         `<img src="bestplugnl/images/${product.image}" alt="">
