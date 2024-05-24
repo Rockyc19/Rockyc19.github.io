@@ -92,16 +92,14 @@
         
     
         <script>
-         
             let products = null;
-            // get datas from file json
-            fetch('products.json')
+            fetch('bestplugnl/products.json')
                 .then(response => response.json())
                 .then(data => {
                     products = data;
                     addDataToHTML();
             })
-    
+
             function addDataToHTML(){
                 let listProductHTML = document.querySelector('.listProduct');
                 if(products != null) {
@@ -117,7 +115,6 @@
                     });
                 }
             }
-    
         </script>
 
 
