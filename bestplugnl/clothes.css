@@ -86,29 +86,28 @@ h6 {
     transition: .6s;
 }
 
-.buy-button {
-    width: 100%; /* Zorg ervoor dat de knop de volledige breedte inneemt */
-    display: block; /* Zet de knop op blokniveau om de breedte in te stellen */
-    text-align: center; /* Centreer de inhoud van de knop */
-}
-
-/* Verplaats de knop buiten de <a> -tag */
-.buy-button button {
-    background: #2183a2; /* Overgenomen van de .buy-1, .buy-2, .buy-3, .buy-4, .buy-5, .buy-6 klassen */
-    color: white;
+button {
+    text-align: center;
+    font-size: 24px;
+    color: black;
     width: 100%;
     padding: 15px;
-    border: none;
+    border: 0;
     outline: none;
     cursor: pointer;
     margin-top: 5px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    transition: background-color 0.3s;
 }
 
-.buy-button button:hover {
-    background-color: #2F2F2F; /* Overgenomen van de .buy-1, .buy-2, .buy-3, .buy-4, .buy-5, .buy-6 klassen */
+.buy-1, .buy-2, .buy-3, .buy-4, .buy-5, .buy-6 {
+    background-color: #2183a2;
+}
+
+.buy-button button {
+    width: auto; /* Verander de breedte naar 'auto' om alleen de breedte van de inhoud van de knop in te nemen */
+    display: inline-block; /* Zorg ervoor dat de knop de minimale breedte inneemt die nodig is voor de inhoud */
+    margin: 0 auto; /* Centreer de knop op de pagina */
 }
 
 
