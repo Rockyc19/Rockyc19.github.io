@@ -269,9 +269,6 @@ a{
     }
 }
 
-body {
-    background: #efe4e4;
-}
 
 /* Poppins Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -287,7 +284,7 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: #efe4e4;
+    /* background: #efe4e4; */
 
 }
 
