@@ -119,49 +119,29 @@
     
 
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
         let products = null;
-        // get datas from file json
         fetch('products.json')
             .then(response => response.json())
             .then(data => {
                 products = data;
-                showDetail();
+                displayProductDetails();
         })
 
-        function showDetail(){
-    // remove datas default from HTML
-        let detail = document.querySelector('.detail');
-        let listProduct = document.querySelector('.listProduct');
-        let productId =  new URLSearchParams(window.location.search).get('id');
-        let thisProduct = products.filter(value => value.id == productId)[0];
-        //if there is no product with id = productId => return to home page
-        if(!thisProduct){
-            window.location.href = "/";
+        function displayProductDetails(){
+            if(products != null) {
+                const thisProduct = products.find(product => product.id == productId);
+                if(thisProduct) {
+                    document.querySelector('.image img').src = 'images/' + thisProduct.image;
+                    document.querySelector('.name').innerText = thisProduct.name;
+                    document.querySelector('.price').innerText = '$' + thisProduct.price;
+                    document.querySelector('.description').innerText = thisProduct.description;
+                }
+            }
         }
-
-        detail.querySelector('.image img').src = 'images/' + thisProduct.image;
-        detail.querySelector('.name').innerText = thisProduct.name;
-        detail.querySelector('.price').innerText = '$' + thisProduct.price;
-        detail.querySelector('.description').innerText = '' + thisProduct.description;
-
-
-        (products.filter(value => value.id != productId)).forEach(product => {
-            let newProduct = document.createElement('a');
-            newProduct.href = 'bestplugnl/detail.html?id=' + product.id;
-            newProduct.classList.add('item');
-            newProduct.innerHTML = 
-            `<img src="${product.image}" alt="">
-            <h2>${product.name}</h2>
-            <div class="price">$${product.price}</div>`;
-            listProduct.appendChild(newProduct);
-        });
-    }
-
-
-
-
     </script>
-
 
 <script>
         
