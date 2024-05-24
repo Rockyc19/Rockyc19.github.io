@@ -189,62 +189,7 @@ ul li{
     width: 60px;
 }
 
-@media only screen and (max-width: 755px) {
-    nav{
-        z-index: 200;
-    }
-    .nav_menu{
-        display: none;
-    }
-    .nav_dropdown_menu.responsive{
-        display: flex;
-    }
-    .dropdown{
-        position: relative;
-    }
-    .nav_dropdown_menu{
-        position: absolute;
-        top: 50px;
-        right: 0;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.1);
-        width: 300px;
-        height: 380px;
-        backdrop-filter: blur(25px);
-        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
-        border-radius: 20px;
-        transition: all .3s ease-in-out;
-    }
-    .nav_dropdown_menu ul li{
-        line-height: 90px;
-        margin: 0;
-        text-align: center;
-    }
-    .dropdown:hover .bar_1{
-        margin-left: 5px;
-    }
-     .dropdown:hover .bar_2{
-         margin-right: 10px;
-    }
-    .main{
-        flex-direction: column;
-    }
-    .left_col{
-        width: 100%;
-        padding: 0 8vw;
-        order: 2;
-    }
-    .right_col{
-        width: 100%;
-        position: relative;
-        height: 300px;
-        order: 1;
-    }
- 
- 
-}
+
 /* Zorg ervoor dat de footer aan de onderkant van de pagina blijft */
 footer {
     margin-top: auto;
