@@ -284,7 +284,7 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: #efe4e4;
+    /* background: #efe4e4; */
 
 }
 
@@ -293,7 +293,7 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-nav{
+/* nav{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -302,7 +302,7 @@ nav{
     height: 120px;
     line-height: 120px;
     z-index: 100;
-}
+} */
 .left_nav{
     display: flex;
     gap: 50px;
