@@ -284,7 +284,7 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    /* background: #efe4e4; */
+    background: #efe4e4;
 
 }
 
@@ -303,7 +303,7 @@ html, body {
     line-height: 120px;
     z-index: 100;
 } */
-.left_nav{
+/* .left_nav{
     display: flex;
     gap: 50px;
 }
@@ -318,7 +318,7 @@ html, body {
 .nav_menu ul{
     display: flex;
     flex-direction: row;
-}
+} */
 
 
 .item_1 img{
