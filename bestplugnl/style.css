@@ -189,5 +189,17 @@ ul li{
     width: 60px;
 }
 
-
-
+@media only screen and (max-width: 755px) {
+    nav{
+        z-index: 200;
+    }
+    .nav_menu{
+        display: none;
+    }
+    .nav_dropdown_menu.responsive{
+        display: flex;
+    }
+    .dropdown{
+        position: relative;
+    }
+}
