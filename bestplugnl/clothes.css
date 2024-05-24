@@ -104,11 +104,6 @@ button {
     background-color: #2183a2;
 }
 
-.buy-button button {
-    width: auto; /* Verander de breedte naar 'auto' om alleen de breedte van de inhoud van de knop in te nemen */
-    display: inline-block; /* Zorg ervoor dat de knop de minimale breedte inneemt die nodig is voor de inhoud */
-    margin: 0 auto; /* Centreer de knop op de pagina */
-}
 
 
 @media (max-width: 1000px) {
@@ -123,12 +118,7 @@ button {
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .buy-1, .buy-2, .buy-3, .buy-4, .buy-5, .buy-6 {
-        width: 50%; /* of een andere gewenste breedte */
-        margin: 0 auto; /* om de knoppen in het midden te centreren */
-    }
-}
+
 /* shoes detail css */
 
 
