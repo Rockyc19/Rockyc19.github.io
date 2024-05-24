@@ -20,6 +20,7 @@ a {
 }
 
 .content {
+    touch-action: manipulation;
     width: 20%;
     margin: 15px;
     box-sizing: border-box;
