@@ -116,6 +116,12 @@ button {
     }
 }
 
+@media (max-width: 750px) {
+    .buy-button {
+        width: 50%; /* of een andere gewenste breedte */
+        margin: 0 auto; /* om de knoppen in het midden te centreren */
+    }
+}
 /* shoes detail css */
 
 
