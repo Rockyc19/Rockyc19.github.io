@@ -44,10 +44,10 @@
 .nav_logo img{
     width: 100px;
 }
-.nav_menu ul{
+/* .nav_menu ul{
     display: flex;
     flex-direction: row;
-}
+} */
 ul li{
     position: relative;
     list-style: none;
