@@ -121,15 +121,16 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
-
+    
         let products = null;
         fetch('products.json')
             .then(response => response.json())
             .then(data => {
                 products = data;
                 displayProductDetails();
+                displayComparableProducts();
         })
-
+    
         function displayProductDetails(){
             if(products != null) {
                 const thisProduct = products.find(product => product.id == productId);
@@ -141,7 +142,25 @@
                 }
             }
         }
+    
+        function displayComparableProducts() {
+            if(products != null) {
+                const thisProduct = products.find(product => product.id == productId);
+                if(thisProduct && thisProduct.comparables) {
+                    const comparableContainer = document.querySelector('.comparables');
+                    thisProduct.comparables.forEach(comparableId => {
+                        const comparableProduct = products.find(product => product.id == comparableId);
+                        if(comparableProduct) {
+                            const comparableElement = document.createElement('div');
+                            comparableElement.innerText = comparableProduct.name;
+                            comparableContainer.appendChild(comparableElement);
+                        }
+                    });
+                }
+            }
+        }
     </script>
+    
 
 <script>
         
