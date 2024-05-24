@@ -1,13 +1,13 @@
 /* Poppins Font */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-} */
+}
 
-/* html, body {
+html, body {
     height: 100%;
     margin: 0;
     display: flex;
@@ -22,8 +22,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-} */
-/* nav{
+}
+nav{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,7 @@
 .left_nav{
     display: flex;
     gap: 50px;
-} */
+}
 .nav_logo{
     display: flex;
     align-items: center;
@@ -44,16 +44,16 @@
 .nav_logo img{
     width: 100px;
 }
-/* .nav_menu ul{
+.nav_menu ul{
     display: flex;
     flex-direction: row;
-} */
+}
 ul li{
     position: relative;
     list-style: none;
     margin: 0 30px;
 }
-/* .link{
+.link{
     text-decoration: none;
     padding: 10px 0;
     color: #000;
@@ -102,7 +102,7 @@ ul li{
 }
 .menu_bars_btn:hover .bar_2{
     margin-right: 10px;
- } */
+ }
 /* BODY ITEMS */
 .item_1 img{
     position: fixed;
@@ -117,7 +117,7 @@ ul li{
     }
 }
 
-/* @media only screen and (max-width: 755px) {
+@media only screen and (max-width: 755px) {
     nav{
         z-index: 200;
     }
@@ -172,7 +172,7 @@ ul li{
     }
  
  
-} */
+}
 /* Zorg ervoor dat de footer aan de onderkant van de pagina blijft */
 footer {
     margin-top: auto;
