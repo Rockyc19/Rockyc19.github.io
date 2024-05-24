@@ -82,9 +82,7 @@ ul li{
     display: flex;
     gap: 50px;
 }
-.nav_cart_box{
-    display: none;
-}
+
 .menu_bars{
     display: flex;
     align-items: center;
@@ -170,21 +168,7 @@ ul li{
     font-weight: 300;
     line-height: 30px;
 }
-.cart{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 80px 0 0;
-}
-.cart_btn{
-    font-weight: 600;
-    width: 130px;
-    height: 45px;
-    border-radius: 30px;
-    border: none;
-    box-shadow: -5px 5px 10px rgba(0,0,0,0.2);
-    cursor: pointer;
-}
+
 .price{
     font-family: 'Cascadia Code',sans-serif;
     font-weight: 500;
@@ -280,17 +264,7 @@ ul li{
     .shop_box{
         margin: 60px 0;
     }
-    .nav_cart_box{
-        display: flex;
-        align-items: center;
-    }
-    .nav_cart_box i{
-        font-size: 30px;
-        cursor: pointer;
-    }
-    .shopping_cart_btn{
-        display: none;
-    }
+ 
 }
 /* Zorg ervoor dat de footer aan de onderkant van de pagina blijft */
 footer {
@@ -306,3 +280,6 @@ footer {
     }
 }
 
+.shopping_cart_btn{
+    display: none;
+}
