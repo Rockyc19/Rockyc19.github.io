@@ -118,24 +118,6 @@ button {
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .content {
-        width: 90%;
-        margin: 0 auto;
-        cursor: pointer;
-        touch-action: manipulation;
-        position: relative;
-    }
-
-    .custom-image {
-        width: 100%;
-        height: auto;
-    }
-}
-
-
-
-
 /* shoes detail css */
 
 
@@ -403,83 +385,11 @@ ul li{
     height: 100vh;
     z-index: 10;
 }
-.item_2 img{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    opacity: 0.1;
-    transform: translate(-30%, -50%) rotate(-5deg);
-    max-width: 550px;
-    width: 100%;
-    z-index: 20;
-    background: transparent;
-}
 
 @media (max-width: 768px) { /* Pas de breedte aan naar wens */
-    .item_2 img, .just_do_it {
+    .item_2 img {
         display: none;
     }
-}
-
-.just_do_it p{
-    position: absolute;
-    top: 50%;
-    right: 100px;
-    transform: translate(-50% -50%);
-    width: 200px;
-    line-height: 100px;
-    font-size: 100px;
-    font-weight: 600;
-    opacity: 0.1;
-    z-index: 100;
-}
-.main{
-    position: relative;
-    display: flex;
-    z-index: 100;
-}
-.left_col{
-    width: 50%;
-    padding-left: 70px;
-    padding-top: 40px;
-}
-.left_col .shoe_title p{
-    font-size: 4.2vw;
-    font-weight: 600;
-    letter-spacing: 7px;
-}
-.line hr{
-    border: 1px solid #222;
-    width: 200px;
-    margin: 25px 0 35px 0;
-}
-.left_col .shoe_description p{
-    font-family: 'Cascadia Code',sans-serif;
-    font-weight: 300;
-    line-height: 30px;
-}
-
-.price{
-    font-family: 'Cascadia Code',sans-serif;
-    font-weight: 500;
-}
-
-.shoe_img_box .shoe_img{
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    width: 130px;
-    transform: translate(-50%, -50%) rotate(-40deg);
-    transition: .3s ease-in-out;
-}
-.shoe_name_price{
-    display: flex;
-    justify-content: space-between;
-}
-.shoe_name_price h3{
-    font-family: Impact;
-    font-weight: 400;
-    width: 60px;
 }
 
 @media only screen and (max-width: 755px) {
@@ -551,4 +461,3 @@ footer {
         padding: 20px 0;
     }
 }
-
