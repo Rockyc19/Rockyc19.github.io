@@ -76,6 +76,38 @@ ul li {
     width: 30px;
 }
 
+.nav_dropdown_menu{
+    display: none;
+}
+.right_nav{
+    display: flex;
+    gap: 50px;
+}
+
+.menu_bars{
+    display: flex;
+    align-items: center;
+}
+.menu_bars_btn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.menu_bars_btn img{
+   width: 30px;
+}
+.bar_1, .bar_2{
+    transition: .3s ease-in-out;
+}
+.menu_bars_btn:hover .bar_1{
+   margin-left: 5px;
+}
+.menu_bars_btn:hover .bar_2{
+    margin-right: 10px;
+ }
+
 /* BODY ITEMS */
 .item_1 img {
     position: fixed;
