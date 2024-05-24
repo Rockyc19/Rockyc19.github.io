@@ -284,7 +284,7 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    /* background: #efe4e4; */
+    background: #efe4e4;
 
 }
 
@@ -321,9 +321,9 @@ html, body {
 } */
 
 
-.item_1 img{
+/* .item_1 img{
     position: fixed;
     top: 0;
     height: 100vh;
     z-index: 10;
-}
+} */
