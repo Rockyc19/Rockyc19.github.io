@@ -116,8 +116,8 @@ button {
     }
 }
 
-@media (max-width: 750px) {
-    .buy-button {
+@media only screen and (max-width: 768px) {
+    .buy-1, .buy-2, .buy-3, .buy-4, .buy-5, .buy-6 {
         width: 50%; /* of een andere gewenste breedte */
         margin: 0 auto; /* om de knoppen in het midden te centreren */
     }
