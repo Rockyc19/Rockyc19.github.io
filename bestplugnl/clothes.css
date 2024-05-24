@@ -291,5 +291,31 @@ html, body {
 
 }
 
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6vw;
+    height: 120px;
+    line-height: 120px;
+    z-index: 100;
+}
+.left_nav{
+    display: flex;
+    gap: 50px;
+}
+.nav_logo{
+    display: flex;
+    align-items: center;
+}
+.nav_logo img{
+    width: 100px;
+}
 
 
