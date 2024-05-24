@@ -117,12 +117,13 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
-    .buy-button button {
-        width: 100%; /* Verander de breedte naar 'auto' om alleen de breedte van de inhoud van de knop in te nemen */
-        display: inline-block; /* Zorg ervoor dat de knop de minimale breedte inneemt die nodig is voor de inhoud */
-        margin: 0 auto; /* Centreer de knop op de pagina */
+    .content {
+        width: 90%; /* Aanpassen aan de gewenste breedte */
+        margin: 0 auto; /* Om de content in het midden te centreren */
+        cursor: pointer; /* Verander de cursor in een pointer om aan te geven dat erop geklikt kan worden */
     }
 }
+
 
 
 /* shoes detail css */
