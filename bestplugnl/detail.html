@@ -147,23 +147,24 @@
             detail.querySelector('.description').innerText = thisProduct.description;
     
             // Display comparable products
-            if (thisProduct.comparables) {
-                thisProduct.comparables.forEach(comparableId => {
-                    const comparableProduct = products.find(product => product.id == comparableId);
-                    if (comparableProduct) {
-                        const comparableElement = document.createElement('a');
-                        comparableElement.href = '/detail.html?id=' + comparableProduct.id;
-                        comparableElement.classList.add('item');
-                        comparableElement.innerHTML = `
-                            <img src="images/${comparableProduct.image}" alt="">
-                            <h2>${comparableProduct.name}</h2>
-                            <div class="price">$${comparableProduct.price}</div>`;
-                        listProduct.appendChild(comparableElement);
+            if (thisProduct.listProduct) {
+                thisProduct.listProduct.forEach(productId => {
+                    const product = products.find(product => product.id == productId);
+                    if (product) {
+                        const productElement = document.createElement('a');
+                        productElement.href = '/detail.html?id=' + product.id;
+                        productElement.classList.add('item');
+                        productElement.innerHTML = `
+                            <img src="images/${product.image}" alt="">
+                            <h2>${product.name}</h2>
+                            <div class="price">$${product.price}</div>`;
+                        listProduct.appendChild(productElement);
                     }
                 });
             }
         }
     </script>
+    
     
 
 <script>
