@@ -118,47 +118,51 @@
 
     
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('id');
-    
         let products = null;
+        // Fetch data from JSON file
         fetch('products.json')
             .then(response => response.json())
             .then(data => {
                 products = data;
-                displayProductDetails();
-                displayComparableProducts();
+                showDetail();
         })
     
-        function displayProductDetails(){
-            if(products != null) {
-                const thisProduct = products.find(product => product.id == productId);
-                if(thisProduct) {
-                    document.querySelector('.image img').src = 'images/' + thisProduct.image;
-                    document.querySelector('.name').innerText = thisProduct.name;
-                    document.querySelector('.price').innerText = '$' + thisProduct.price;
-                    document.querySelector('.description').innerText = thisProduct.description;
-                }
+        function showDetail() {
+            // Remove default data from HTML
+            let detail = document.querySelector('.detail');
+            let listProduct = document.querySelector('.listProduct');
+            let productId = new URLSearchParams(window.location.search).get('id');
+            let thisProduct = products.find(value => value.id == productId);
+    
+            // If there is no product with id = productId, return to the home page
+            if (!thisProduct) {
+                window.location.href = "/";
+                return; // Added return to prevent further execution of the function
+            }
+    
+            // Populate detail section with product information
+            detail.querySelector('.image img').src = 'images/' + thisProduct.image;
+            detail.querySelector('.name').innerText = thisProduct.name;
+            detail.querySelector('.price').innerText = '$' + thisProduct.price;
+            detail.querySelector('.description').innerText = thisProduct.description;
+    
+            // Display comparable products
+            if (thisProduct.comparables) {
+                thisProduct.comparables.forEach(comparableId => {
+                    const comparableProduct = products.find(product => product.id == comparableId);
+                    if (comparableProduct) {
+                        const comparableElement = document.createElement('a');
+                        comparableElement.href = '/detail.html?id=' + comparableProduct.id;
+                        comparableElement.classList.add('item');
+                        comparableElement.innerHTML = `
+                            <img src="images/${comparableProduct.image}" alt="">
+                            <h2>${comparableProduct.name}</h2>
+                            <div class="price">$${comparableProduct.price}</div>`;
+                        listProduct.appendChild(comparableElement);
+                    }
+                });
             }
         }
-    
-        function displayComparableProducts() {
-    if(products != null) {
-        const thisProduct = products.find(product => product.id == productId);
-        if(thisProduct && thisProduct.comparables) {
-            const comparableContainer = document.querySelector('.listProduct');
-            thisProduct.comparables.forEach(comparableId => {
-                const comparableProduct = products.find(product => product.id == comparableId);
-                if(comparableProduct) {
-                    const comparableElement = document.createElement('div');
-                    comparableElement.innerText = comparableProduct.name;
-                    comparableContainer.appendChild(comparableElement);
-                }
-            });
-        }
-    }
-}
-
     </script>
     
 
