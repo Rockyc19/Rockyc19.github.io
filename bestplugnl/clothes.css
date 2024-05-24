@@ -284,7 +284,7 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    /* background: #efe4e4; */
+    background: #efe4e4;
 
 }
 
@@ -319,37 +319,7 @@ nav{
     display: flex;
     flex-direction: row;
 }
-ul li{
-    position: relative;
-    list-style: none;
-    margin: 0 30px;
-}
-.link{
-    text-decoration: none;
-    padding: 10px 0;
-    color: #000;
-    font-size: 15px;
-    font-weight: 500;
-}
-.nav_menu .link_border{
-    height: 1px;
-    width: 0;
-    position: absolute;
-    bottom: 43px;
-    left: 0;
-    background: #000;
-    transition: .4s ease-in-out;
-}
-.nav_menu ul li a:hover ~ .link_border{
-    width: 30px;
-}
-.nav_dropdown_menu{
-    display: none;
-}
-.right_nav{
-    display: flex;
-    gap: 50px;
-}
+
 
 .item_1 img{
     position: fixed;
