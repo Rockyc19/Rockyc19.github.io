@@ -108,12 +108,20 @@ button {
 @media (max-width: 1000px) {
     .content {
         width: 45%;
+        margin: 0 auto; /* Om de content in het midden te centreren */
+        cursor: pointer; /* Verander de cursor in een pointer om aan te geven dat erop geklikt kan worden */
+        touch-action: manipulation; /* Voeg touch-action toe om te voorkomen dat het hele scherm wordt ingehouden */
+    
     }
 }
 
 @media (max-width: 750px) {
     .content {
         width: 100%;
+        margin: 0 auto; /* Om de content in het midden te centreren */
+        cursor: pointer; /* Verander de cursor in een pointer om aan te geven dat erop geklikt kan worden */
+        touch-action: manipulation; /* Voeg touch-action toe om te voorkomen dat het hele scherm wordt ingehouden */
+    
     }
 }
 
@@ -122,6 +130,7 @@ button {
         width: 90%; /* Aanpassen aan de gewenste breedte */
         margin: 0 auto; /* Om de content in het midden te centreren */
         cursor: pointer; /* Verander de cursor in een pointer om aan te geven dat erop geklikt kan worden */
+        touch-action: manipulation; /* Voeg touch-action toe om te voorkomen dat het hele scherm wordt ingehouden */
     }
 }
 
