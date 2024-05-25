@@ -1,58 +1,58 @@
 [
     {
         "id": 1,
-        "name":" YEEZY BLACK",
+        "name":" YEEZY BLACK DAZZLING BLUE",
         "price": 200,
-        "image": "../images/yeezy1.png",
+        "image": "../images/image-removebg-preview.png",
         "description": "Voeg ons toe op Snapchat Acprvtte of Instagram Bestplugnl. Bekijk onze kleren en zoek uit wat je wilt, Heb je je product gevonden? stuur een appje naar 0647900322."
     },
     {
         "id": 2,
-        "name":" YEEZY BLACK",
+        "name":" YEEZY 500 SALT",
         "price": 200,
-        "image": "../images/yeezy1.png",
+        "image": "../images/image-removebg-preview (7).png",
         "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
     },
     {
         "id": 3,
-        "name":" LD03 LOUNGE CHAIR",
+        "name":" DIOR B22 WHITE BLUE",
         "price": 290,
-        "image": "../images/yeezy1.png",
+        "image": "../images/dior-b22-white-blue-3sn231yxx_h865-removebg-preview.png",
         "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
     },
     {
         "id": 4,
-        "name":" LD04 LOUNGE CHAIR",
+        "name":" DIOR B30 BLACK",
         "price": 200,
-        "image": "../images/yeezy1.png",
+        "image": "../images/dior-b30-black-3sn279zmb_h969-removebg-preview.png",
         "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
     },
     {
         "id": 5,
-        "name":" LD05 LOUNGE CHAIR",
+        "name":" LORO PIANA MARINE",
         "price": 300,
-        "image": "../images/yeezy1.png",
+        "image": "../images/image-removebg-preview (1).png",
         "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
     },
     {
         "id": 6,
-        "name":" LD06 LOUNGE CHAIR",
+        "name":" ADIDAS YEEZY BOOST 700 V2 STATIC ",
         "price": 200,
-        "image": "../images/yeezy1.png",
+        "image": "../images/image-removebg-preview (8).png",
         "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
     },
     {
         "id": 7,
-        "name":" LD07 LOUNGE CHAIR",
+        "name":" HERMES SNEAKER",
         "price": 200,
-        "image": "../images/yeezy1.png",
+        "image": "../images/image-removebg-preview (4).png",
         "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
     },
     {
         "id": 8,
-        "name":" LD08 LOUNGE CHAIR",
+        "name":" YEEZY 700 V3 KYANITE",
         "price": 200,
-        "image": "../images/yeezy1.png",
+        "image": "../images/image-removebg-preview (6).png",
         "description": "Expertly rendered by Carl Hansen & Søn, the lounge chair—first introduced in 1951 and enduring ever since—is available in oak or as a combination of oak and walnut, sourced from sustainable forestry. Choose from seat and back upholstery in a selection of leather options or in a custom fabric."
     }
 
