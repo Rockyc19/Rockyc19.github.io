@@ -138,7 +138,7 @@
             window.location.href = "/";
         }
 
-        detail.querySelector('.image img').src = thisProduct.image;
+        detail.querySelector('.image img').src = "./images/" + thisProduct.image;
         detail.querySelector('.name').innerText = thisProduct.name;
         detail.querySelector('.price').innerText = '$' + thisProduct.price;
         detail.querySelector('.description').innerText = '' + thisProduct.description;
@@ -149,7 +149,7 @@
             newProduct.href = '/detail.html?id=' + product.id;
             newProduct.classList.add('item');
             newProduct.innerHTML = 
-            `<img src="${product.image}" alt="">
+            `<img src="images/${product.image}" alt="">
             <h2>${product.name}</h2>
             <div class="price">$${product.price}</div>`;
             listProduct.appendChild(newProduct);
