@@ -14,12 +14,6 @@
         <div class="item_1">
             <img src="images/6.png" alt="">
         </div>
-        <!-- <div class="item_2">
-            <img src="images/image_123650291.JPG" alt="">
-        </div> -->
-        <!-- <div class="just_do_it">
-            <p>Best Plug NL</p>
-        </div> -->
     </div>    
     <div class="container">
         <nav>
@@ -38,7 +32,7 @@
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="#" class="link">Reviews</a>
+                            <a href="./review.html" class="link">Reviews</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
@@ -80,16 +74,12 @@
             </div>
         </nav>
       
-
-
         <div class="container1">
             <div class="title">PRODUCT LIST</div>
             <div class="listProduct">
     
             </div>
         </div>
-    
-        
     
         <script>
             let products = null;
@@ -105,6 +95,7 @@
                 if(products != null) {
                     products.forEach(product => {
                         let newProduct = document.createElement('a');
+                        // Hier wordt de link naar de detailpagina van het product ingesteld
                         newProduct.href = './detail.html?id=' + product.id;
                         newProduct.classList.add('item');
                         newProduct.innerHTML = 
