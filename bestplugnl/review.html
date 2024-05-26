@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BestPlugNL</title>
+    <title>BestPlugNL | Tayfun</title>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,19 +26,19 @@
                 <div class="nav_menu">
                     <ul>
                         <li>
-                            <a href="index.html" class="link">Home</a>
+                            <a href="./index.html" class="link">Home</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="clothes.html" class="link">Clothes</a>
+                            <a href="./clothes.html" class="link">Clothes</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="review.html" class="link">Reviews</a>
+                            <a href="./review.html" class="link">Reviews</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="contact.html" class="link">Contact</a>
+                            <a href="./contact.html" class="link">Contact</a>
                             <div class="link_border"></div>
                         </li>
                     </ul>
@@ -80,7 +80,9 @@
             /*================= testimonial ==========================*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
 
-:root {
+
+
+        :root {
             --primary-color: #041c32;
             --secondary-color: #04293a;
             --ghots-color: #f1f1f1;
@@ -166,125 +168,75 @@
             width: 24px;
             height: 24px;
         }
-        </style>
-
-<section>
-    <!-- container -->
-    <div class="container1">
-        <h1>Our Reviews</h1>
-        <!-- card -->
-        <div class="card">
-            <div class="card-header">
-                <img alt="img" />
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="comment"></p>
-            </div>
-            <div class="card-footer">
-                <div class="nav-buttons">
-                    <button id="prevButton">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
-                            <path fill="#2196F3" d="m30.9 43l3.1-3.1L18.1 24L34 8.1L30.9 5L12 24z" />
-                        </svg>
-                    </button>
-                    <button id="nextButton">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
-                            <path fill="#2196F3" d="M17.1 5L14 8.1L29.9 24L14 39.9l3.1 3.1L36 24z" />
-                        </svg>
-                    </button>
+    </style>
+</head>
+<body>
+    <section>
+        <!-- container -->
+        <div class="container1">
+            <h1>Our Reviews</h1>
+            <!-- card -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="images/review.jpg" alt="Reviewer Image" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="comment">This is an amazing product! Highly recommend it.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="nav-buttons">
+                        <button id="prevButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                <path fill="#2196F3" d="m30.9 43l3.1-3.1L18.1 24L34 8.1L30.9 5L12 24z" />
+                            </svg>
+                        </button>
+                        <button id="nextButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                <path fill="#2196F3" d="M17.1 5L14 8.1L29.9 24L14 39.9l3.1 3.1L36 24z" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
+            <!-- /card -->
         </div>
-        <!-- /card -->
-    </div>
-    <!-- /container -->
-</section>
-<!-- /section -->
-<!-- js file -->
-<script>
-    var reviews = [
-        // Your review data here
-    ];
-</script>
+        <!-- /container -->
+    </section>
+    <!-- /section -->
+    <!-- js file -->
+    <script>
+        var reviews = [
+            { name: "John Doe", comment: "This is an amazing product! Highly recommend it.", img: "images/review1.jpg" },
+            { name: "Jane Smith", comment: "Loved it! Great quality and fast shipping.", img: "images/review2.jpg" },
+            // Add more reviews as needed
+        ];
+        
+        // Example JavaScript to handle review navigation
+        let currentReviewIndex = 0;
 
-        </body>
+        function updateReview(index) {
+            const review = reviews[index];
+            document.querySelector(".card-header img").src = review.img;
+            document.querySelector(".card-title").textContent = review.name;
+            document.querySelector(".comment").textContent = review.comment;
+        }
 
-            <script>
-              var reviews = [
-  {
-    id: 1,
-    name: "Jane",
-    role: "frontend developer",
-    comment:
-      "I think even if I did the research mentioned above, it would be a total waste of money because if those people don't believe in the testimonials, they won't believe in the research at all. They would say that I made it all up. So why waste money?",
-    url:
-      "https://images.unsplash.com/photo-1485875437342-9b39470b3d95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d29tZW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-  },
-  {
-    id: 2,
-    name: "Mike",
-    role: "ASP.NET developer",
-    comment:
-      "A testimonial is an honest endorsement of your product or service that usually comes from a customer, colleague, or peer who has benefited from or experienced success as a result of the work you did for them.",
-    url:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWVufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-  },
-  {
-    id: 3,
-    name: "Rick",
-    role: "frontend developer",
-    comment:
-      "Your testimonial page serves as a platform to show off how others have benefited from your product or service, making it a powerful tool for establishing trust and encouraging potential buyers to take action.",
-    url:
-      "https://media.istockphoto.com/photos/shot-of-a-young-businessman-working-on-his-laptop-at-his-desk-picture-id1389465862?b=1&k=20&m=1389465862&s=170667a&w=0&h=J_npFHoiIBLGz_S7Y8TxY6aDcA5M3X2HRnAMqF13ZZY="
-  },
-  {
-    id: 4,
-    name: "Tanya",
-    role: "web developer",
-    comment:
-      "To generate these glowing testimonials, you need to know who your happy, successful customers are — and that's where collecting and analyzing customer feedback comes in. Once you've found those customers and collected their reviews, it's time to turn that enthusiasm into effective, affordable marketing materials.",
-    url:
-      "https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGdpcmx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-  }
-];
+        document.getElementById("prevButton").addEventListener("click", function() {
+            currentReviewIndex = (currentReviewIndex > 0) ? currentReviewIndex - 1 : reviews.length - 1;
+            updateReview(currentReviewIndex);
+        });
 
-const next = document.getElementById("nextButton");
-const prev = document.getElementById("prevButton");
-const img = document.querySelector(".card-header img");
-const title = document.querySelector(".card-title");
-const bodyContent = document.querySelector(".comment");
-let counter = 0;
+        document.getElementById("nextButton").addEventListener("click", function() {
+            currentReviewIndex = (currentReviewIndex < reviews.length - 1) ? currentReviewIndex + 1 : 0;
+            updateReview(currentReviewIndex);
+        });
 
-window.addEventListener("DOMContentLoaded", getActiveTab());
-
-//=================== next button ==================//
-
-next.addEventListener("click", () => {
-  counter++;
-  if (counter >= reviews.length) {
-    counter = 0;
-  }
-  getActiveTab(counter);
-});
-
-//=================== prev button ==================//
-prev.addEventListener("click", () => {
-  counter--;
-  if (counter < 0) {
-    counter = reviews.length - 1;
-  }
-  getActiveTab(counter);
-});
-
-//=============== get active Tab ===================//
-function getActiveTab(elm = 0) {
-  var element = reviews[elm];
-  title.textContent = element.name + ", " + element.role;
-  bodyContent.textContent = element.comment;
-  img.src = element.url;
-}
+        // Initialize with the first review
+        updateReview(currentReviewIndex);
+    </script>
+</body>
+</html>
 
             </script>
         
