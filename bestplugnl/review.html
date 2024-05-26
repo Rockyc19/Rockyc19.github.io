@@ -26,19 +26,19 @@
                 <div class="nav_menu">
                     <ul>
                         <li>
-                            <a href="./index.html" class="link">Home</a>
+                            <a href="index.html" class="link">Home</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="./clothes.html" class="link">Clothes</a>
+                            <a href="clothes.html" class="link">Clothes</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="./review.html" class="link">Reviews</a>
+                            <a href="review.html" class="link">Reviews</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="./contact.html" class="link">Contact</a>
+                            <a href="contact.html" class="link">Contact</a>
                             <div class="link_border"></div>
                         </li>
                     </ul>
@@ -81,121 +81,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
 
 :root {
-  --primary-color: #041c32;
-  --secondary-color: #04293a;
-  --ghots-color: #f1f1f1;
-  --transprent-color: transparent;
-  --shadow-sm: 10px -4px 2px #0dcaf0;
-  --rounded-50: 50%;
-  --rounded-10: 0.625rem;
-}
+            --primary-color: #041c32;
+            --secondary-color: #04293a;
+            --ghots-color: #f1f1f1;
+            --transparent-color: transparent;
+            --shadow-sm: 10px -4px 2px #0dcaf0;
+            --rounded-50: 50%;
+            --rounded-10: 0.625rem;
+        }
 
-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  background: var(--transparent-color);
-}
+        button {
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background: var(--transparent-color);
+        }
 
-h1 {
-  font-size: clamp(2rem, 2.5vw, 3rem);
-  margin-bottom: 2.5rem;
-  font-weight: 500;
-  text-align: center;
-}
+        h1 {
+            font-size: clamp(2rem, 2.5vw, 3rem);
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+            text-align: center;
+        }
 
-section {
-  display: grid;
-  place-items: center;
-  height: 60vh;
-}
+        section {
+            display: grid;
+            place-items: center;
+            height: 60vh;
+        }
 
-.container1 {
-  padding-inline: 1rem;
-  width: 500px;
-}
+        .container1 {
+            padding-inline: 1rem;
+            width: 500px;
+        }
 
-section .card {
-  min-height: 100%;
-  min-width: 1rem;
-  background-color: var(--secondary-color);
-  padding: 2rem;
-  border-radius: var(--rounded-10);
-  word-wrap: break-word;
-  text-align: center;
-  margin-inline: auto;
-}
+        section .card {
+            min-height: 100%;
+            min-width: 1rem;
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: var(--rounded-10);
+            word-wrap: break-word;
+            text-align: center;
+            margin-inline: auto;
+        }
 
-section .card img {
-  max-width: 100%;
-  height: 8rem;
-  object-fit: cover;
-  width: 8rem;
-  border-radius: var(--rounded-50);
-  margin-inline: auto;
-  margin-bottom: 0.625rem;
-}
+        section .card img {
+            max-width: 100%;
+            height: 8rem;
+            object-fit: cover;
+            width: 8rem;
+            border-radius: var(--rounded-50);
+            margin-inline: auto;
+            margin-bottom: 0.625rem;
+        }
 
-section .card-body .card-title {
-  font-size: clamp(1.2rem, 1.4vw, 2rem);
-  font-weight: 400;
-  margin-bottom: 0.625rem;
-}
+        section .card-body .card-title {
+            font-size: clamp(1.2rem, 1.4vw, 2rem);
+            font-weight: 400;
+            margin-bottom: 0.625rem;
+        }
 
-section .card-body p {
-  font: size 0.875em;
-  margin-bottom: 0.625rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
+        section .card-body p {
+            font: size 0.875em;
+            margin-bottom: 0.625rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
 
-section .card-body p + button {
-  margin-right: 0.57rem;
-}
+        section .card-body p + button {
+            margin-right: 0.57rem;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        button svg {
+            width: 24px;
+            height: 24px;
+        }
         </style>
 
-        <section>
-            <!-- container -->
-            <div class="container1">
-              <h1>Our Reviews</h1>
-              <!-- card -->
-              <div class="card">
-                <div class="card-header">
-                  <img alt="img" />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="comment"></p>
-                </div>
-                <div class="card-footer">
-                  <button id="prevButton">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48" style="
-                          -ms-transform: rotate(360deg);
-                          -webkit-transform: rotate(360deg);
-                          transform: rotate(360deg);
-                        ">
-                      <path fill="#2196F3" d="m30.9 43l3.1-3.1L18.1 24L34 8.1L30.9 5L12 24z" />
-                    </svg>
-                  </button>
-                  <button id="nextButton">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48" style="
-                          -ms-transform: rotate(360deg);
-                          -webkit-transform: rotate(360deg);
-                          transform: rotate(360deg);
-                        ">
-                      <path fill="#2196F3" d="M17.1 5L14 8.1L29.9 24L14 39.9l3.1 3.1L36 24z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <!-- /card -->
+<section>
+    <!-- container -->
+    <div class="container1">
+        <h1>Our Reviews</h1>
+        <!-- card -->
+        <div class="card">
+            <div class="card-header">
+                <img alt="img" />
             </div>
-            <!-- /container -->
-          </section>
-          <!-- /section -->
-          <!-- js file -->
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="comment"></p>
+            </div>
+            <div class="card-footer">
+                <div class="nav-buttons">
+                    <button id="prevButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                            <path fill="#2196F3" d="m30.9 43l3.1-3.1L18.1 24L34 8.1L30.9 5L12 24z" />
+                        </svg>
+                    </button>
+                    <button id="nextButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                            <path fill="#2196F3" d="M17.1 5L14 8.1L29.9 24L14 39.9l3.1 3.1L36 24z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- /card -->
+    </div>
+    <!-- /container -->
+</section>
+<!-- /section -->
+<!-- js file -->
+<script>
+    var reviews = [
+        // Your review data here
+    ];
+</script>
+
         </body>
 
             <script>
