@@ -3,306 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BestPlugNL</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
     <link rel="stylesheet" href="clothes.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
     <div class="body_items">
         <div class="item_1">
             <img src="images/6.png" alt="">
         </div>
-    </div>
-    
+        <!-- <div class="item_2">
+            <img src="images/image_123650291.JPG" alt="">
+        </div>
+        <div class="just_do_it">
+            <p>Best
+               Plug
+               NL
+            </p>
+        </div> -->
+    </div>    
     <div class="container">
         <nav>
             <div class="left_nav">
                 <div class="nav_logo">
-                    <img src="images/image_123650291.JPG" alt="Logo">
+                    <img src="images/image_123650291.JPG" alt="">
                 </div>
                 <div class="nav_menu">
                     <ul>
                         <li>
-                            <a href="index.html" class="link">Home</a>
+                            <a href="./index.html" class="link">Home</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="clothes.html" class="link">Clothes</a>
+                            <a href="./clothes.html" class="link">Clothes</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="review.html" class="link">Reviews</a>
+                            <a href="./review.html" class="link">Reviews</a>
                             <div class="link_border"></div>
                         </li>
                         <li>
-                            <a href="contact.html" class="link">Contact</a>
+                            <a href="./contact.html" class="link">Contact</a>
                             <div class="link_border"></div>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="right_nav">
+              
                 <div class="dropdown">
                     <div class="menu_bars" onclick="myMenuFunction()">
                         <div class="menu_bars_btn">
-                            <img src="images/bar.png" class="bar_1" alt="Menu bar">
-                            <img src="images/bar.png" class="bar_2" alt="Menu bar">
+                          <img src="images/bar.png" class="bar_1">
+                          <img src="images/bar.png" class="bar_2">
                         </div>
-                    </div>
-                    <div class="nav_dropdown_menu" id="navDropdownMenu">
-                        <ul>
+                        <div class="nav_dropdown_menu" id="navDropdownMenu">
+                           <ul>
                             <li>
-                                <a href="index.html" class="link">Home</a>
+                                <a href="./index.html" class="link">Home</a>
                                 <div class="link_border"></div>
                             </li>
                             <li>
-                                <a href="clothes.html" class="link">Clothes</a>
+                                <a href="./clothes.html" class="link">Clothes</a>
                                 <div class="link_border"></div>
                             </li>
                             <li>
-                                <a href="review.html" class="link">Reviews</a>
+                                <a href="./review.html" class="link">Reviews</a>
                                 <div class="link_border"></div>
                             </li>
                             <li>
-                                <a href="contact.html" class="link">Contact</a>
+                                <a href="./contact.html" class="link">Contact</a>
                                 <div class="link_border"></div>
                             </li>
-                        </ul>
+                           </ul>
+                         </div>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <style>
-            /*================= testimonial ==========================*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
-
-:root {
-            --primary-color: #041c32;
-            --secondary-color: #04293a;
-            --ghots-color: #f1f1f1;
-            --transparent-color: transparent;
-            --shadow-sm: 10px -4px 2px #0dcaf0;
-            --rounded-50: 50%;
-            --rounded-10: 0.625rem;
-        }
-
-        button {
-            outline: none;
-            border: none;
-            cursor: pointer;
-            background: var(--transparent-color);
-        }
-
-        h1 {
-            font-size: clamp(2rem, 2.5vw, 3rem);
-            margin-bottom: 2.5rem;
-            font-weight: 500;
-            text-align: center;
-        }
-
-        section {
-            display: grid;
-            place-items: center;
-            height: 60vh;
-        }
-
-        .container1 {
-            padding-inline: 1rem;
-            width: 500px;
-        }
-
-        section .card {
-            min-height: 100%;
-            min-width: 1rem;
-            background-color: var(--secondary-color);
-            padding: 2rem;
-            border-radius: var(--rounded-10);
-            word-wrap: break-word;
-            text-align: center;
-            margin-inline: auto;
-        }
-
-        section .card img {
-            max-width: 100%;
-            height: 8rem;
-            object-fit: cover;
-            width: 8rem;
-            border-radius: var(--rounded-50);
-            margin-inline: auto;
-            margin-bottom: 0.625rem;
-        }
-
-        section .card-body .card-title {
-            font-size: clamp(1.2rem, 1.4vw, 2rem);
-            font-weight: 400;
-            margin-bottom: 0.625rem;
-        }
-
-        section .card-body p {
-            font: size 0.875em;
-            margin-bottom: 0.625rem;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-
-        section .card-body p + button {
-            margin-right: 0.57rem;
-        }
-
-        .nav-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 1rem;
-        }
-
-        button svg {
-            width: 24px;
-            height: 24px;
-        }
-        </style>
-
-<section>
-    <!-- container -->
-    <div class="container1">
-        <h1>Our Reviews</h1>
-        <!-- card -->
-        <div class="card">
-            <div class="card-header">
-                <img alt="img" />
+    <div class="container">
+        <div class="title">PRODUCT DETAIL</div>
+        <div class="detail">
+            <div class="image">
+                <img src="">
             </div>
-            <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="comment"></p>
-            </div>
-            <div class="card-footer">
-                <div class="nav-buttons">
-                    <button id="prevButton">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
-                            <path fill="#2196F3" d="m30.9 43l3.1-3.1L18.1 24L34 8.1L30.9 5L12 24z" />
-                        </svg>
-                    </button>
-                    <button id="nextButton">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
-                            <path fill="#2196F3" d="M17.1 5L14 8.1L29.9 24L14 39.9l3.1 3.1L36 24z" />
-                        </svg>
+            <div class="content1">
+                <h1 class="name"></h1>
+                <div class="price"></div>
+                <div class="buttons">
+                    <a href="schoen.html" class="button-link">
+                        <button>Ga terug</button>
+                    </a>
+                    <button>06-47900322 
+                        <span>
+                            <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                            </svg>
+                        </span>
                     </button>
                 </div>
+                
+                
+                <div class="description"></div>
             </div>
         </div>
-        <!-- /card -->
+
+        <div class="title">Vergelijkbaren producten</div>
+        <div class="listProduct"></div>
     </div>
-    <!-- /container -->
-</section>
-<!-- /section -->
-<!-- js file -->
-<script>
-    var reviews = [
-        // Your review data here
-    ];
-</script>
 
-        </body>
+    
 
-            <script>
-              var reviews = [
-  {
-    id: 1,
-    name: "Jane",
-    role: "frontend developer",
-    comment:
-      "I think even if I did the research mentioned above, it would be a total waste of money because if those people don't believe in the testimonials, they won't believe in the research at all. They would say that I made it all up. So why waste money?",
-    url:
-      "https://images.unsplash.com/photo-1485875437342-9b39470b3d95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d29tZW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-  },
-  {
-    id: 2,
-    name: "Mike",
-    role: "ASP.NET developer",
-    comment:
-      "A testimonial is an honest endorsement of your product or service that usually comes from a customer, colleague, or peer who has benefited from or experienced success as a result of the work you did for them.",
-    url:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWVufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-  },
-  {
-    id: 3,
-    name: "Rick",
-    role: "frontend developer",
-    comment:
-      "Your testimonial page serves as a platform to show off how others have benefited from your product or service, making it a powerful tool for establishing trust and encouraging potential buyers to take action.",
-    url:
-      "https://media.istockphoto.com/photos/shot-of-a-young-businessman-working-on-his-laptop-at-his-desk-picture-id1389465862?b=1&k=20&m=1389465862&s=170667a&w=0&h=J_npFHoiIBLGz_S7Y8TxY6aDcA5M3X2HRnAMqF13ZZY="
-  },
-  {
-    id: 4,
-    name: "Tanya",
-    role: "web developer",
-    comment:
-      "To generate these glowing testimonials, you need to know who your happy, successful customers are — and that's where collecting and analyzing customer feedback comes in. Once you've found those customers and collected their reviews, it's time to turn that enthusiasm into effective, affordable marketing materials.",
-    url:
-      "https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGdpcmx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-  }
-];
+    <script>
+        let products = null;
+        // get datas from file json
+        fetch('products.json')
+            .then(response => response.json())
+            .then(data => {
+                products = data;
+                showDetail();
+        })
 
-const next = document.getElementById("nextButton");
-const prev = document.getElementById("prevButton");
-const img = document.querySelector(".card-header img");
-const title = document.querySelector(".card-title");
-const bodyContent = document.querySelector(".comment");
-let counter = 0;
-
-window.addEventListener("DOMContentLoaded", getActiveTab());
-
-//=================== next button ==================//
-
-next.addEventListener("click", () => {
-  counter++;
-  if (counter >= reviews.length) {
-    counter = 0;
-  }
-  getActiveTab(counter);
-});
-
-//=================== prev button ==================//
-prev.addEventListener("click", () => {
-  counter--;
-  if (counter < 0) {
-    counter = reviews.length - 1;
-  }
-  getActiveTab(counter);
-});
-
-//=============== get active Tab ===================//
-function getActiveTab(elm = 0) {
-  var element = reviews[elm];
-  title.textContent = element.name + ", " + element.role;
-  bodyContent.textContent = element.comment;
-  img.src = element.url;
-}
-
-            </script>
-        
-<script>
-        function myMenuFunction() {
-            var i = document.getElementById("navDropdownMenu");
-            if (i.className === "nav_dropdown_menu") {
-                i.className += " responsive";
-            } else {
-                i.className = "nav_dropdown_menu";
-            }
+        function showDetail(){
+    // remove datas default from HTML
+        let detail = document.querySelector('.detail');
+        let listProduct = document.querySelector('.listProduct');
+        let productId =  new URLSearchParams(window.location.search).get('id');
+        let thisProduct = products.filter(value => value.id == productId)[0];
+        //if there is no product with id = productId => return to home page
+        if(!thisProduct){
+            window.location.href = "/";
         }
+
+        detail.querySelector('.image img').src = thisProduct.image;
+        detail.querySelector('.name').innerText = thisProduct.name;
+        detail.querySelector('.price').innerText = '$' + thisProduct.price;
+        detail.querySelector('.description').innerText = '' + thisProduct.description;
+
+
+        (products.filter(value => value.id != productId)).forEach(product => {
+            let newProduct = document.createElement('a');
+            newProduct.href = '/detail.html?id=' + product.id;
+            newProduct.classList.add('item');
+            newProduct.innerHTML = 
+            `<img src="${product.image}" alt="">
+            <h2>${product.name}</h2>
+            <div class="price">$${product.price}</div>`;
+            listProduct.appendChild(newProduct);
+        });
+    }
+
     </script>
 
-    <footer>
-        <div class="site-copyright">
-            <p>Copyright 2024 © BestPlugNL. All rights reserved. Made by Tayfun Cavdar</p>
-        </div>
-    </footer>
+
+<script>
+        
+    function myMenuFunction() {
+        var i = document.getElementById("navDropdownMenu");
+          if(i.className === "nav_dropdown_menu") {
+               i.className += " responsive";
+          } else {
+               i.className = "nav_dropdown_menu";
+          }
+   }
+      
+     </script>
 </body>
 </html>
