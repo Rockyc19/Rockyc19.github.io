@@ -457,3 +457,10 @@ h4 {
   #contact .icon-twitter i {
     font-size: 23px; /* Specifieke grootte voor het mail-icoon */
   }
+
+  img.round {
+    width: 450px; /* pas dit aan naar de gewenste breedte */
+    height: 450px; /* pas dit aan naar de gewenste hoogte */
+    border-radius: 50%; /* zorgt ervoor dat de afbeelding rond is */
+    object-fit: cover; /* zorgt ervoor dat de afbeelding goed past binnen de cirkel */
+}
