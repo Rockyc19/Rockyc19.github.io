@@ -564,11 +564,11 @@ h4 {
   }
 
   img.round {
-  
-   
     object-fit: cover; /* zorgt ervoor dat de afbeelding goed past binnen de cirkel */
-    border-radius: 25px;
+    border-radius: 25px; /* maakt de afbeelding rond */
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); /* voegt een schaduw toe */
 }
+
 
       /* Stijl voor verschillende achtergronden */
       .background1 {
