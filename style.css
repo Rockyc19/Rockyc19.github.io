@@ -459,8 +459,8 @@ h4 {
   }
 
   img.round {
-    width: 450px; /* pas dit aan naar de gewenste breedte */
-    height: 450px; /* pas dit aan naar de gewenste hoogte */
-    border-radius: 50%; /* zorgt ervoor dat de afbeelding rond is */
+  
+   
     object-fit: cover; /* zorgt ervoor dat de afbeelding goed past binnen de cirkel */
+    border-radius: 25px;
 }
