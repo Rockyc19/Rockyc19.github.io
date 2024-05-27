@@ -443,3 +443,17 @@ h4 {
     visibility: visible;
 }
 
+#contact .contact-text h2 {
+    font-size: 36px; /* Pas dit aan naar de gewenste grootte */
+    margin-bottom: 50px;
+    margin-top: -20px; /* Pas dit aan naar de gewenste verschuiving naar boven */
+  }
+
+  #contact .wrapper i {
+    color: black; /* Maak de icons zwart */
+    font-size: 30px; /* Zorg dat alle iconen dezelfde grootte hebben, pas indien nodig aan */
+  }
+  
+  #contact .icon-twitter i {
+    font-size: 23px; /* Specifieke grootte voor het mail-icoon */
+  }
