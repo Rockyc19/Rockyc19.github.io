@@ -134,16 +134,18 @@ a{
 }
 .title{
     font-size: xx-large;
-    padding: 20px 0;
+    padding: 20px 20px;
 }
 .listProduct .item img{
     width: 90%;
     filter: drop-shadow(0 50px 20px #0009);
+    
 }
 .listProduct{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    padding: 40px;
 }
 .listProduct .item{
     background-color: #EEEEE6;
@@ -168,6 +170,7 @@ a{
 }
 .detail .image img{
     width: 75%;
+    padding: 20px;
 }
 .detail .image{
     position: relative;
@@ -277,6 +280,7 @@ a{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 html, body {
