@@ -3,7 +3,6 @@
   <head>
     <title>Tayfun Cavdar</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="voetbal.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
@@ -14,18 +13,20 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap"
+      
     />
-   
   </head>
 
   <body>
-
-
     
     <!----About section start---->
     <section class="about">
       <div class="main">
-        <img src="./images/e2f908e3-9058-411e-b05c-3b1c66138090.JPG" class="round"/>        <div class="about-text">
+        <img
+          src="./images/e2f908e3-9058-411e-b05c-3b1c66138090.JPG"
+          class="round"
+        />
+        <div class="about-text">
           <div class="soccer"></div>
           <h2>Tayfun Cavdar</h2>
 
@@ -45,10 +46,43 @@
               Here you can download my CV. I will keep this up-to-date with all
               the new things I do and learn.
             </p>
-            <!-- Link om CV te downloaden -->
-            <a href="cv tayfun.pdf" download class="download-button"
-              >Download CV</a
-            >
+         <!-- Voeg een ID toe aan de button voor eenvoudige selectie -->
+<button id="downloadButton" class="button">
+  <span class="button_lg">
+      <span class="button_sl"></span>
+      <span class="button_text">Download Now</span>
+  </span>
+</button>
+
+<script>
+  // Selecteer de downloadknop
+  const downloadButton = document.getElementById("downloadButton");
+
+  // Voeg een klikgebeurtenis toe aan de knop
+  downloadButton.addEventListener("click", function() {
+      // Locatie van het CV-bestand
+      const cvFile = "cv tayfun.pdf";
+
+      // Maak een link-element aan
+      const link = document.createElement("a");
+
+      // Stel het href-attribuut in op de locatie van het bestand
+      link.href = cvFile;
+
+      // Stel het download-attribuut in op de bestandsnaam
+      link.download = "cv tayfun.pdf";
+
+      // Voeg het link-element toe aan de pagina
+      document.body.appendChild(link);
+
+      // Klik op het link-element om het downloaden te activeren
+      link.click();
+
+      // Verwijder het link-element van de pagina nadat het downloaden is voltooid
+      document.body.removeChild(link);
+  });
+</script>
+            
           </div>
         </div>
       </section>
@@ -104,7 +138,7 @@
               <br />
               <a href="https://sdg-scantool.ibi2.nl/index.php">Click here</a>
             </div>
-        
+
             <!-- <div class="project-box">
               <h3>Project 3</h3>
               <h4>HTML CSS JAVASCRIPT</h4>
@@ -164,18 +198,9 @@
                 src="./images/php-1-logo-png-transparent.png"
                 alt="Programmeertaal 2"
               />
-              <img
-                src="./images/mysql-logo-1.png"
-                alt="Programmeertaal 2"
-              />
-              <img
-                src="./images/JavaScript-logo.png"
-                alt="Programmeertaal 2"
-              />
-              <img
-                src="./images/python-logo-2.png"
-                alt="Programmeertaal 2"
-              />
+              <img src="./images/mysql-logo-1.png" alt="Programmeertaal 2" />
+              <img src="./images/JavaScript-logo.png" alt="Programmeertaal 2" />
+              <img src="./images/python-logo-2.png" alt="Programmeertaal 2" />
               <img
                 src="./images/63065002cd563e1cd1cead28_eaadfe64.png"
                 alt="Programmeertaal 2"
@@ -194,8 +219,7 @@
           <div class="wrapper">
             <div class="icon-facebook">
               <div class="tooltip">Facebook</div>
-              <a
-                href="https://www.facebook.com/tayfun.cavdar.520"
+              <a href="https://www.facebook.com/tayfun.cavdar.520"
                 ><i class="fab fa-facebook" style="font-size: 30px"></i
               ></a>
             </div>
@@ -230,7 +254,8 @@
       </section>
 
       <script>
-        const text = "Hi, As a software development student at Gilde Roermond, I mainly work with PHP and JavaScript. PHP allows me to build dynamic web applications and retrieve data from databases, while JavaScript allows me to add interactive elements and dynamic content to my projects. My experience with these languages grows with every project I tackle, and I'm always looking for new ways to improve my skills and learn more about the possibilities they bring to software development.";
+        const text =
+          "Hi, As a software development student at Gilde Roermond, I mainly work with PHP and JavaScript. PHP allows me to build dynamic web applications and retrieve data from databases, while JavaScript allows me to add interactive elements and dynamic content to my projects. My experience with these languages grows with every project I tackle, and I'm always looking for new ways to improve my skills and learn more about the possibilities they bring to software development.";
         let index = 0;
 
         function type() {
