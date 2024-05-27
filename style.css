@@ -464,3 +464,12 @@ h4 {
     object-fit: cover; /* zorgt ervoor dat de afbeelding goed past binnen de cirkel */
     border-radius: 25px;
 }
+
+      /* Stijl voor verschillende achtergronden */
+      .background1 {
+        background-color: lightblue;
+      }
+      .background2 {
+        background-color: lightgreen;
+      }
+      /* Voeg extra achtergrondstijlen toe indien nodig */
