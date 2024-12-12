@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tayfun Cavdar Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+  </head>
+  <body>
+    <!-- <header class="header">
+      <img src="./assets/logo/logo.png" alt="" class="logo" />
+      <ul class="main-nav-list">
+        <li><a href="a" class="main-nav-link">Home</a></li>
+        <li><a href="a" class="main-nav-link">Work</a></li>
+        <li><a href="a" class="main-nav-link">Contact</a></li>
+      </ul>
+    </header> -->
+    <section class="hero">
+      <img src="./assets/hero/webdev.png" alt="" class="hero-img" />
+      <img src="./assets/hero/bg.jpg" alt="" class="bg" />
+      <div class="hero-description">
+        <h1 class="hero-title">Hi, I'm <span class="dand">Tayfun</span>!</h1>
+      </div>
+      <div class="hero-model">
+        <model-viewer
+          src="./models/desk.glb"
+          camera-controls
+          disable-pan
+          disable-zoom
+          interaction-prompt="none"
+          min-camera-orbit="auto 45deg auto"
+          max-camera-orbit="auto 92deg auto"
+          field-of-view="40.3deg"
+        >
+        </model-viewer>
+      </div>
+    </section>
+
+    <section class="about-me-intro">
+      <div class="intro-container">
+        <h2 class="intro-title">About me</h2>
+        <div class="intro-content">
+          <p class="intro-text">
+            Hi, As a software development student at Gilde Roermond, I mainly
+            work with PHP and JavaScript. PHP allows me to build dynamic web
+            applications and retrieve data from databases, while JavaScript
+            allows me to add interactive elements and dynamic content to my
+            projects. My experience with these languages grows with every
+            project I tackle, and I'm always looking for new ways to improve my
+            skills and learn more about the possibilities they bring to software
+            development.
+          </p>
+          <!-- <img src="./assets/logo/tayfun.JPG" alt="My Photo" class="intro-photo" /> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="about-me">
+      <!-- Remove the incorrect closing </p> tag -->
+      <div class="cards">
+        <div class="card animation">
+          <img src="./assets/skills/react.png" alt="" class="reactImg" />
+          <p class="title">React Js</p>
+        </div>
+        <div class="card animation">
+          <img
+            src="./assets/skills/php-1-logo-png-transparent.png"
+            alt=""
+            class="php"
+          />
+          <p class="title">PHP</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/python-logo-2.png" alt="" class="python" />
+          <p class="title">Python</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/js.png" alt="" class="js" />
+          <p class="title">Javascript</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/logo_html.png" alt="" class="htmlImg" />
+          <p class="title">Html</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/mysql-logo-1.png" alt="" class="mysql" />
+          <p class="title">Mysql</p>
+        </div>
+        <div class="card animation">
+          <img
+            src="./assets/skills/198-1984828_java-icon-transparent-hd-png-download.png"
+            alt=""
+            class="java"
+          />
+          <p class="title">Java</p>
+        </div>
+        <div class="card animation">
+          <img
+            src="./assets/skills/63065002cd563e1cd1cead28_eaadfe64.png"
+            alt=""
+            class="c"
+          />
+          <p class="title">C#</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/css-logo.png" alt="" class="cssImg" />
+          <p class="title">Css</p>
+        </div>
+      </div>
+    </section>
+    <section class="time-line-section">
+      <div class="time-line-content">
+        <div class="heading-description">
+          <h1 class="time-line-subheading">Work experience</h1>
+        </div>
+        <div class="timeline">
+          <div class="line"></div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Web development</h2>
+              <p class="content-timeline-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                doloremque totam ea cum perferendis provident, mollitia
+                consequatur itaque animi non, obcaecati molestias et eum harum
+                repudiandae. Alias veritatis sit suscipit!
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Web Design</h2>
+              <p class="content-timeline-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                doloremque totam ea cum perferendis provident, mollitia
+                consequatur itaque animi non, obcaecati molestias et eum harum
+                repudiandae. Alias veritatis sit suscipit!
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Html & Css</h2>
+              <p class="content-timeline-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                doloremque totam ea cum perferendis provident, mollitia
+                consequatur itaque animi non, obcaecati molestias et eum harum
+                repudiandae. Alias veritatis sit suscipit!
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Javascript</h2>
+              <p class="content-timeline-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                doloremque totam ea cum perferendis provident, mollitia
+                consequatur itaque animi non, obcaecati molestias et eum harum
+                repudiandae. Alias veritatis sit suscipit!
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">React 3 Fiber</h2>
+              <p class="content-timeline-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                doloremque totam ea cum perferendis provident, mollitia
+                consequatur itaque animi non, obcaecati molestias et eum harum
+                repudiandae. Alias veritatis sit suscipit!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projection">
+      <h1 class="projection-title">My Projects</h1>
+      <div class="projections">
+        <div class="projection-item">
+          <img
+            src="./assets/projections/project1.png"
+            class="projection-img"
+            alt=""
+          />
+          <h2 class="projection-item-title">BestplugNL</h2>
+          <p class="projection-item-description">
+            On this dutch clothing website you can view and explore an extensive
+            collection of clothing items. If you are interested in a specific
+            item, you can easily place an order by simply calling the telephone
+            number provided. This offers a personal and direct way to order your
+            favorite clothing. With a focus on telephone orders, we strive to
+            provide a personalized shopping experience that meets the needs of
+            our customers. (Its for mobile and only by the page clothes can you
+            click on shoes)
+          </p>
+          <a href="./bestplugnl/index.html" class="btn">See Project</a>
+        </div>
+        <hr class="project-divider" />
+        <div class="projection-item">
+          <img
+            src="./assets/projections/project2.png"
+            class="projection-img"
+            alt=""
+          />
+          <h2 class="projection-item-title">SDG Scantool</h2>
+          <p class="projection-item-description">
+            This is a tool i created on my internschip at IBI2-Institute for
+            sustainable transitions & biomimicry innovations. This tool is
+            designed to help companies to see how they are doing on the SDG's.
+            IBI2 uses this tool to make reports for companies and gives them
+            advise on how they could improve to the SDG standart of the EU. In
+            this tool you can create reports, see previous ones and print the
+            output. (you cant login.)
+          </p>
+          <a href="https://sdg-scantool.ibi2.nl/index.php" class="btn"
+            >See Project</a
+          >
+        </div>
+        <hr class="project-divider" />
+        <div class="projection-item">
+          <img
+            src="./assets/projections/project3.png"
+            class="projection-img"
+            alt=""
+          />
+          <h2 class="projection-item-title">Orifice Calculator</h2>
+          <p class="projection-item-description">
+            The calculator assists in selecting the optimal orifice size and
+            material to ensure precise and efficient cutting. This helps
+            maximize tool lifespan and minimize downtime. These orifices are
+            widely used in industries such as aerospace, medical device
+            manufacturing, and custom fabrication. Additionally, DD Technologies
+            offers diamond orifices that are globally recognized by leading OEMs
+            for their durability and superior performance.
+          </p>
+          <a
+            href="https://www.dd-technologies.com/products/orifices/calculator"
+            class="btn"
+            >See Project</a
+          >
+        </div>
+        <hr class="project-divider" />
+        <div class="projection-item">
+          <img
+            src="./assets/projections/project4.png"
+            class="projection-img"
+            alt=""
+          />
+          <h2 class="projection-item-title">Audiometer</h2>
+          <p class="projection-item-description">
+            This project was developed for a client seeking a tool to assess
+            individuals' hearing capabilities. The Audiometer allows users to
+            play beep sounds at various frequencies and volumes to evaluate
+            hearing, primarily targeting children. The results are displayed in
+            a comprehensive graph, enabling the client to create customized
+            music that supports optimal auditory development for each
+            individual.
+          </p>
+          <a href="#" class="btn" onclick="openPopup('project4', event)"
+            >See Project</a
+          >
+        </div>
+
+        <!-- Popup structure -->
+        <div id="project4-popup" class="popup">
+          <div class="popup-content">
+            <span class="close" onclick="closePopup('project4')">&times;</span>
+            <h2>Audiometer</h2>
+            <div class="popup-slider">
+              <img
+                src="./assets/links/black-audiogram.png"
+                alt="Detail 1"
+                class="popup-slide"
+              />
+              <img
+                src="./assets/links/white-audiogram.png"
+                alt="Detail 2"
+                class="popup-slide"
+              />
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-text">
+        <h2>Contact Me</h2>
+        <div class="wrapper">
+          <div class="icon-facebook">
+            <div class="tooltip">Facebook</div>
+            <a href="https://www.facebook.com/tayfun.cavdar.520">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+          <div class="icon-twitter">
+            <div class="tooltip">Mail</div>
+            <a
+              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=tayfuncavdar2004@gmail.com"
+            >
+              <i class="fa fa-envelope-open"></i>
+            </a>
+          </div>
+          <div class="icon-instagram">
+            <div class="tooltip">Instagram</div>
+            <a href="https://www.instagram.com/tayfun.c19/">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div class="icon-github">
+            <div class="tooltip">GitHub</div>
+            <a href="https://github.com/Rockyc19">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div class="icon-linkedin">
+            <div class="tooltip">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/tayfun-cavdar-967415226/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

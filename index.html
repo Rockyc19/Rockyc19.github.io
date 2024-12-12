@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
     <title>Tayfun Cavdar</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -13,12 +13,14 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap"
-      
     />
   </head>
 
   <body>
-    
+    <span id="changeLanguageButton" class="switch-icon">
+      <i class="fas fa-toggle-on fa-2x"></i>
+    </span>
+
     <!----About section start---->
     <section class="about">
       <div class="main">
@@ -46,43 +48,42 @@
               Here you can download my CV. I will keep this up-to-date with all
               the new things I do and learn.
             </p>
-         <!-- Voeg een ID toe aan de button voor eenvoudige selectie -->
-<button id="downloadButton" class="button">
-  <span class="button_lg">
-      <span class="button_sl"></span>
-      <span class="button_text">Download Now</span>
-  </span>
-</button>
+            <!-- Voeg een ID toe aan de button voor eenvoudige selectie -->
+            <button id="downloadButton" class="button">
+              <span class="button_lg">
+                <span class="button_sl"></span>
+                <span class="button_text">Download Now</span>
+              </span>
+            </button>
 
-<script>
-  // Selecteer de downloadknop
-  const downloadButton = document.getElementById("downloadButton");
+            <script>
+              // Selecteer de downloadknop
+              const downloadButton = document.getElementById("downloadButton");
 
-  // Voeg een klikgebeurtenis toe aan de knop
-  downloadButton.addEventListener("click", function() {
-      // Locatie van het CV-bestand
-      const cvFile = "cv tayfun.pdf";
+              // Voeg een klikgebeurtenis toe aan de knop
+              downloadButton.addEventListener("click", function () {
+                // Locatie van het CV-bestand
+                const cvFile = "cv tayfun.pdf";
 
-      // Maak een link-element aan
-      const link = document.createElement("a");
+                // Maak een link-element aan
+                const link = document.createElement("a");
 
-      // Stel het href-attribuut in op de locatie van het bestand
-      link.href = cvFile;
+                // Stel het href-attribuut in op de locatie van het bestand
+                link.href = cvFile;
 
-      // Stel het download-attribuut in op de bestandsnaam
-      link.download = "cv tayfun.pdf";
+                // Stel het download-attribuut in op de bestandsnaam
+                link.download = "cv tayfun.pdf";
 
-      // Voeg het link-element toe aan de pagina
-      document.body.appendChild(link);
+                // Voeg het link-element toe aan de pagina
+                document.body.appendChild(link);
 
-      // Klik op het link-element om het downloaden te activeren
-      link.click();
+                // Klik op het link-element om het downloaden te activeren
+                link.click();
 
-      // Verwijder het link-element van de pagina nadat het downloaden is voltooid
-      document.body.removeChild(link);
-  });
-</script>
-            
+                // Verwijder het link-element van de pagina nadat het downloaden is voltooid
+                document.body.removeChild(link);
+              });
+            </script>
           </div>
         </div>
       </section>
@@ -121,7 +122,7 @@
                 requirements of different online platforms.
               </p>
               <br />
-              <a href="../password_generator/index.html">Click here</a>
+              <a href="../Tayfun/NewPortf/index.html">Click here</a> 
             </div>
             <div class="project-box">
               <h3>SDG Scantool</h3>
@@ -258,16 +259,42 @@
           "Hi, As a software development student at Gilde Roermond, I mainly work with PHP and JavaScript. PHP allows me to build dynamic web applications and retrieve data from databases, while JavaScript allows me to add interactive elements and dynamic content to my projects. My experience with these languages grows with every project I tackle, and I'm always looking for new ways to improve my skills and learn more about the possibilities they bring to software development.";
         let index = 0;
 
+        let typingCompleted = false;
+
         function type() {
-          if (index < text.length) {
+          if (!typingCompleted && index < text.length) {
             document.getElementById("text").innerHTML += text.charAt(index);
             index++;
             setTimeout(type, 30); // Vertraag de snelheid hier door de tijd aan te passen
           } else {
+            typingCompleted = true;
             // Verwijder de cursor na het voltooien van het typen
             document.getElementById("text").style.borderRight = "none";
           }
         }
+
+        function changeLanguage() {
+  const textEnglish = "Hi, As a software development student at Gilde Roermond, I mainly work with PHP and JavaScript. PHP allows me to build dynamic web applications and retrieve data from databases, while JavaScript allows me to add interactive elements and dynamic content to my projects. My experience with these languages grows with every project I tackle, and I'm always looking for new ways to improve my skills and learn more about the possibilities they bring to software development.";
+
+  const textDutch = "Hallo, Als student Software Development aan Gilde Roermond werk ik voornamelijk met PHP en JavaScript. PHP stelt me in staat dynamische webapplicaties te bouwen en gegevens uit databases op te halen, terwijl JavaScript me in staat stelt interactieve elementen en dynamische inhoud aan mijn projecten toe te voegen. Mijn ervaring met deze talen groeit met elk project dat ik aanpak, en ik ben altijd op zoek naar nieuwe manieren om mijn vaardigheden te verbeteren en meer te leren over de mogelijkheden die ze bieden voor softwareontwikkeling.";
+
+  // Selecteer de tekstcontainer
+  const textContainer = document.getElementById("text");
+
+  // Controleer de huidige taal en update de tekst dienovereenkomstig
+  if (!typingCompleted && index < text.length) {
+    const currentLanguage = isDutch ? textDutch : textEnglish;
+    textContainer.innerHTML += currentLanguage.charAt(index);
+    index++;
+    setTimeout(type, 30); // Vertraag de snelheid hier door de tijd aan te passen
+  } else {
+    typingCompleted = true;
+    // Verwijder de cursor na het voltooien van het typen
+    textContainer.style.borderRight = "none";
+  }
+}
+
+
 
         window.onload = function () {
           type();
@@ -280,6 +307,152 @@
               .getElementById("contact")
               .scrollIntoView({ behavior: "smooth" });
           });
+      </script>
+
+      <script>
+        let isDutch = false;
+
+        function changeLanguage() {
+          if (!isDutch) {
+            // Voer de functie uit om de taal naar het Nederlands te veranderen
+            changeToDutch();
+          } else {
+            // Engelse vertalingen terugzetten
+            document.querySelector(".about h2").innerText = "About Me";
+            document.querySelector(".about button").innerText = "Contact Me";
+
+            document.querySelector(
+              ".projects .project-box:nth-child(2) h3"
+            ).innerText = "Random Password Generator";
+            document.querySelector(
+              ".projects .project-box:nth-child(2) p"
+            ).innerText =
+              "A random password generator is a great way to generate strong passwords that are difficult for others to guess, yet easy for you to remember. This generator offers the ability to adjust the password length between 1 and 128 characters is great, as it gives users the flexibility to create passwords that meet the requirements of different online platforms.";
+
+            document.querySelector(
+              ".projects .project-box:nth-child(1) h3"
+            ).innerText = "BestplugNL (Still in development)";
+            document.querySelector(
+              ".projects .project-box:nth-child(1) p"
+            ).innerText =
+              "On this dutch clothing website you can view and explore an extensive collection of clothing items. If you are interested in a specific item, you can easily place an order by simply calling the telephone number provided. This offers a personal and direct way to order your favorite clothing. With a focus on telephone orders, we strive to provide a personalized shopping experience that meets the needs of our customers. (Its for mobile and only by the page clothes can you click on shoes)";
+
+            document.querySelector(".cv h2").innerText = "CV";
+            document.querySelector(".cv p").innerText =
+              "Here you can download my CV. I will keep this up-to-date with all the new things I do and learn.";
+            document.querySelector("#downloadButton .button_text").innerText =
+              "Download Now";
+
+            document.querySelector(".projects h2").innerText = "My Projects";
+
+            document.querySelector(".taal h2").innerText =
+              "Programming languages I have worked with";
+
+            document.querySelector(".about h2").innerText = "About Me";
+            document.querySelector(".about button").innerText = "Contact Me";
+            document.getElementById("text").innerText =
+              "Hi, As a software development student at Gilde Roermond, I mainly work with PHP and JavaScript. PHP allows me to build dynamic web applications and retrieve data from databases, while JavaScript allows me to add interactive elements and dynamic content to my projects. My experience with these languages grows with every project I tackle, and I'm always looking for new ways to improve my skills and learn more about the possibilities they bring to software development.";
+
+            document.querySelector("#contact h2").innerText = "Contact Me";
+
+            document.querySelector(
+              ".projects .project-box:nth-child(3) p"
+            ).innerText =
+              "This is a tool i created on my internschip at IBI2-Institute for sustainable transitions & biomimicry innovations. This tool is designed to help companies to see how they are doing on the SDG's. IBI2 uses this tool to make reports for companies and gives them advise on how they could improve to the SDG standart of the EU. In this tool you can create reports, see previous ones and print the output. (you cant login).";
+
+            document.querySelector(
+              ".projects .project-box:nth-child(2) p"
+            ).innerText =
+              "A random password generator is a great way to generate strong passwords that are difficult for others to guess, yet easy for you to remember. This generator offers the ability to adjust the password length between 1 and 128 characters is great, as it gives users the flexibility to create passwords that meet the requirements of different online platforms.";
+          }
+          // Keer de waarde van isDutch om
+          isDutch = !isDutch;
+        }
+
+        // Function to change language to Dutch
+        function changeToDutch() {
+          // Stop de typende animatie
+          index = text.length;
+          typingCompleted = true;
+
+          // About section
+          document.querySelector(".about h2").innerText = "Over mij";
+          document.querySelector(".about button").innerText = "Neem contact op";
+
+          document.querySelector(
+            ".projects .project-box:nth-child(2) h3"
+          ).innerText = "Willekeurige Wachtwoordgenerator";
+          document.querySelector(
+            ".projects .project-box:nth-child(2) p"
+          ).innerText =
+            "Een wachtwoordgenerator is een geweldige manier om sterke wachtwoorden te genereren die moeilijk te raden zijn voor anderen, maar gemakkelijk te onthouden zijn voor jou. Deze generator biedt de mogelijkheid om de wachtwoordlengte tussen 1 en 128 tekens aan te passen, wat geweldig is omdat het gebruikers de flexibiliteit geeft om wachtwoorden te maken die voldoen aan de eisen van verschillende online platforms.";
+            
+
+          // Projects section (specifically the BestplugNL paragraph)
+          document.querySelector(
+            ".projects .project-box:nth-child(1) h3"
+          ).innerText = "BestplugNL (Nog in ontwikkeling)";
+          document.querySelector(
+            ".projects .project-box:nth-child(1) p"
+          ).innerText =
+            "Op deze Nederlandse kledingwebsite kunt u een uitgebreide collectie kledingstukken bekijken en verkennen. Als u geïnteresseerd bent in een specifiek item, kunt u eenvoudig een bestelling plaatsen door eenvoudigweg het verstrekte telefoonnummer te bellen. Dit biedt een persoonlijke en directe manier om uw favoriete kleding te bestellen. Met de focus op telefonische bestellingen streven we ernaar een gepersonaliseerde winkelervaring te bieden die voldoet aan de behoeften van onze klanten. (Het is voor mobiel en alleen op de kledingpagina kun je op schoenen klikken)";
+
+          // CV section
+          document.querySelector(".cv h2").innerText = "CV";
+          document.querySelector(".cv p").innerText =
+            "Hier kunt u mijn CV downloaden. Ik zal dit up-to-date houden met alles wat ik doe en leer.";
+          document.querySelector("#downloadButton .button_text").innerText =
+            "Download nu";
+
+          // Projects section
+          document.querySelector(".projects h2").innerText = "Mijn Projecten";
+
+          // Programming languages section
+          document.querySelector(".taal h2").innerText =
+            "Programmeertalen waarmee ik heb gewerkt";
+
+          // About section
+          document.querySelector(".about h2").innerText = "Over mij";
+          document.querySelector(".about button").innerText = "Neem contact op";
+          document.getElementById("text").innerText =
+            "Hallo, Als student Software Development aan Gilde Roermond werk ik voornamelijk met PHP en JavaScript. PHP stelt me in staat dynamische webapplicaties te bouwen en gegevens uit databases op te halen, terwijl JavaScript me in staat stelt interactieve elementen en dynamische inhoud aan mijn projecten toe te voegen. Mijn ervaring met deze talen groeit met elk project dat ik aanpak, en ik ben altijd op zoek naar nieuwe manieren om mijn vaardigheden te verbeteren en meer te leren over de mogelijkheden die ze bieden voor softwareontwikkeling.";
+            document.querySelector('.projects .project-box:nth-child(3) a').innerText = "Klik hier";
+            document.querySelector('.projects .project-box:nth-child(2) a').innerText = "Klik hier";
+            document.querySelector('.projects .project-box:nth-child(1) a').innerText = "Klik hier";
+
+
+
+          // Contact section
+          document.querySelector("#contact h2").innerText = "Neem contact op";
+
+          // Projects section (specifically the SDG Scantool paragraph)
+          document.querySelector(
+            ".projects .project-box:nth-child(3) p"
+          ).innerText =
+            "Dit is een tool die ik heb gemaakt tijdens mijn stage bij IBI2-Instituut voor Duurzame Transities & Biomimicry Innovations. Deze tool is ontworpen om bedrijven te helpen zien hoe ze presteren op de SDG's. IBI2 gebruikt deze tool om rapporten voor bedrijven te maken en hen advies te geven over hoe ze kunnen voldoen aan de SDG-standaard van de EU. Met deze tool kunt u rapporten maken, eerdere bekijken en de uitvoer afdrukken. (u kunt niet inloggen).";
+
+          // Projects section (specifically the Random Password Generator paragraph)
+          document.querySelector(
+            ".projects .project-box:nth-child(2) p"
+          ).innerText =
+            "Een wachtwoordgenerator is een geweldige manier om sterke wachtwoorden te genereren die moeilijk te raden zijn voor anderen, maar gemakkelijk te onthouden zijn voor jou. Deze generator biedt de mogelijkheid om de wachtwoordlengte tussen 1 en 128 tekens aan te passen, wat geweldig is omdat het gebruikers de flexibiliteit geeft om wachtwoorden te maken die voldoen aan de eisen van verschillende online platforms.";
+        }
+
+        // Voeg een klikgebeurtenis toe aan de taalwisselknop
+        document
+          .getElementById("changeLanguageButton")
+          .addEventListener("click", function () {
+            changeLanguage();
+          });
+      </script>
+
+      <script>
+        const switchIcon = document.getElementById("changeLanguageButton");
+
+        switchIcon.addEventListener("click", function () {
+          // Wissel de "active" klasse op het switchIcon element
+          switchIcon.classList.toggle("active");
+        });
       </script>
     </section>
   </body>
