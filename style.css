@@ -47,12 +47,47 @@ body {
     color: #fff;
 }
 
-.hero {
+.hero-button {
+    display: none; /* Verberg standaard de knop */
+    position: absolute;
+    bottom: 20vh;
+    z-index: 2;
+  }
+  
+  .hero-button .btn {
+    display: grid;
+    place-items: center;
+    width: 10vw;
+    height: 5vh;
+    margin-top: 5vh;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #010115;
+    box-shadow: 0 0 50px #fffa;
+    color: #fffa;
+    font-size: 1.4vw;
+    font-family: "EB Garamond";
+    transition: all 0.5s;
+  }
+  
+  .hero-button .btn:hover {
+    background-color: #5a2391;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-button {
+      display: block; /* Toon de knop alleen wanneer de pagina responsief is */
+    }
+  }
+
+  .hero {
     display: grid;
     position: relative;
     place-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 100vh; /* Vergroot de hoogte */
+    background: linear-gradient(to bottom, #010115, #020230); /* Voeg een mooie achtergrond toe */
+    overflow: hidden;
 }
 
 .hero::before {
@@ -67,9 +102,9 @@ body {
 
 .hero-img {
     position: absolute;
-    width: 35vw;
+    width: 40vw; /* Vergroot de afbeelding */
     z-index: 1;
-    margin-left: 68vw;
+    margin-left: 30vw; /* Pas de positie aan */
 }
 
 .bg {
@@ -82,16 +117,17 @@ body {
 
 .hero-description {
     position: absolute;
-    width: 20vw;
-    height: 10vh;
+    width: 30vw; /* Vergroot de breedte */
+    height: auto; /* Pas de hoogte aan */
     z-index: 2;
-    margin-top: -60vh;
-    margin-left: -40vw;
+    margin-top: -50vh;
+    margin-left: -35vw;
+    text-align: center; /* Centreer de tekst */
 }
 
 .hero-title {
     color: #fff;
-    font-size: 3vw;
+    font-size: 4vw; /* Vergroot de tekstgrootte */
     font-weight: 400;
     font-family: "EB Garamond";
 }
@@ -103,10 +139,11 @@ body {
 
 .hero-subheading {
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 2vw; /* Vergroot de tekstgrootte */
     font-weight: 400;
     font-family: "EB Garamond";
-    margin-left: 2.6vw;
+    margin-left: 0; /* Centreer de tekst */
+    margin-top: 2vh;
 }
 
 .hero-model {
@@ -119,6 +156,29 @@ model-viewer {
     z-index: 1;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh; /* Pas de hoogte aan voor kleinere schermen */
+    }
+
+    .hero-title {
+        font-size: 6vw; /* Pas de tekstgrootte aan voor kleinere schermen */
+    }
+
+    .hero-subheading {
+        font-size: 3vw; /* Pas de tekstgrootte aan voor kleinere schermen */
+    }
+
+    .hero-img {
+        width: 0vw; /* Pas de grootte van de afbeelding aan voor kleinere schermen */
+        margin-left: 50vw; /* Pas de positie aan */
+    }
+
+    .hero-description {
+        width: 80vw; /* Vergroot de breedte voor kleinere schermen */
+        margin-left: -40vw; /* Centreer de tekst */
+    }
+}
 /* about me */
 
 .about-me {
@@ -814,40 +874,7 @@ model-viewer {
     }
   }
 
-
-  .hero-button {
-    display: none; /* Verberg standaard de knop */
-    position: absolute;
-    bottom: 30vh;
-    z-index: 2;
-  }
-  
-  .hero-button .btn {
-    display: grid;
-    place-items: center;
-    width: 10vw;
-    height: 5vh;
-    margin-top: 5vh;
-    text-decoration: none;
-    border-radius: 15px;
-    background-color: #010115;
-    box-shadow: 0 0 50px #fffa;
-    color: #fffa;
-    font-size: 1.4vw;
-    font-family: "EB Garamond";
-    transition: all 0.5s;
-  }
-  
-  .hero-button .btn:hover {
-    background-color: #5a2391;
-  }
-  
-  @media (max-width: 768px) {
-    .hero-button {
-      display: block; /* Toon de knop alleen wanneer de pagina responsief is */
-    }
-  }
-
+/* project button */
 
   .btn1 {
     display: grid;
