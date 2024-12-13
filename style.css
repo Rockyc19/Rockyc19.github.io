@@ -627,6 +627,37 @@ model-viewer {
     box-shadow: 0 0 10px rgb(140, 56 ,224);
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projection {
+        padding: 5vh 5vw;
+    }
+
+    .projection-item-description {
+        width: 80vw;
+        font-size: 3.5vw;
+    }
+
+    .projection-img {
+        width: 50vw;
+    }
+
+    .projection-item-title {
+        font-size: 4vw;
+    }
+
+    .projection-title {
+        font-size: 6vw;
+    }
+
+    .btn {
+        width: 30vw;
+        height: 7vh;
+        font-size: 3vw;
+    }
+}
+
+/* contact */
 #contact {
     padding: 50px 10vw;
     background-color: #010115;
