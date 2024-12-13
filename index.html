@@ -1,459 +1,601 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
   <head>
-    <title>Tayfun Cavdar</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tayfun Cavdar Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap"
-    />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
   </head>
-
   <body>
-    <span id="changeLanguageButton" class="switch-icon">
-      <i class="fas fa-toggle-on fa-2x"></i>
-    </span>
+    <!-- <header class="header">
+      <img src="./assets/logo/logo.png" alt="" class="logo" />
+      <ul class="main-nav-list">
+        <li><a href="a" class="main-nav-link">Home</a></li>
+        <li><a href="a" class="main-nav-link">Work</a></li>
+        <li><a href="a" class="main-nav-link">Contact</a></li>
+      </ul>
+    </header> -->
+    <section class="hero">
+      <!-- Bestaande hero content -->
+      <img src="./assets/hero/webdev.png" alt="" class="hero-img" />
+      <img src="./assets/hero/bg.jpg" alt="" class="bg" />
+      <div class="hero-description">
+        <h1 class="hero-title">Hi, I'm <span class="dand">Tayfun</span>!</h1>
+      </div>
+      <div class="hero-model">
+        <model-viewer
+          src="./models/desk.glb"
+          camera-controls
+          disable-pan
+          disable-zoom
+          interaction-prompt="none"
+          min-camera-orbit="auto 45deg auto"
+          max-camera-orbit="auto 92deg auto"
+        ></model-viewer>
+      </div>
+      <!-- Nieuwe knop -->
+      <div class="hero-button">
+        <a href="#about-me-intro" class="btn">About Me</a>
+      </div>
+    </section>
 
-    <!----About section start---->
-    <section class="about">
-      <div class="main">
-        <img
-          src="./images/e2f908e3-9058-411e-b05c-3b1c66138090.JPG"
-          class="round"
-        />
-        <div class="about-text">
-          <div class="soccer"></div>
-          <h2>Tayfun Cavdar</h2>
-
-          <h5></h5>
-          <p id="text"></p>
-
-          <button id="see-more">Contact Me</button>
+    <section id="about-me-intro" class="about-me-intro">
+      <div class="intro-container">
+        <h2 class="intro-title">About me</h2>
+        <div class="intro-content">
+          <p class="intro-text">
+            Hi, As a software development student at Gilde Roermond, I mainly
+            work with PHP and JavaScript. PHP allows me to build dynamic web
+            applications and retrieve data from databases, while JavaScript
+            allows me to add interactive elements and dynamic content to my
+            projects. My experience with these languages grows with every
+            project I tackle, and I'm always looking for new ways to improve my
+            skills and learn more about the possibilities they bring to software
+            development.
+          </p>
+          <!-- <img src="./assets/logo/tayfun.JPG" alt="My Photo" class="intro-photo" /> -->
         </div>
       </div>
-
-      <section class="section2" id="cv-section">
-        <div class="cv">
-          <div class="about-text">
-            <h2>CV</h2>
-            <h5></h5>
-            <p>
-              Here you can download my CV. I will keep this up-to-date with all
-              the new things I do and learn.
-            </p>
-            <!-- Voeg een ID toe aan de button voor eenvoudige selectie -->
-            <button id="downloadButton" class="button">
-              <span class="button_lg">
-                <span class="button_sl"></span>
-                <span class="button_text">Download Now</span>
-              </span>
-            </button>
-
-            <script>
-              // Selecteer de downloadknop
-              const downloadButton = document.getElementById("downloadButton");
-
-              // Voeg een klikgebeurtenis toe aan de knop
-              downloadButton.addEventListener("click", function () {
-                // Locatie van het CV-bestand
-                const cvFile = "cv tayfun.pdf";
-
-                // Maak een link-element aan
-                const link = document.createElement("a");
-
-                // Stel het href-attribuut in op de locatie van het bestand
-                link.href = cvFile;
-
-                // Stel het download-attribuut in op de bestandsnaam
-                link.download = "cv tayfun.pdf";
-
-                // Voeg het link-element toe aan de pagina
-                document.body.appendChild(link);
-
-                // Klik op het link-element om het downloaden te activeren
-                link.click();
-
-                // Verwijder het link-element van de pagina nadat het downloaden is voltooid
-                document.body.removeChild(link);
-              });
-            </script>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects section -->
-      <section class="projects section">
-        <div class="container">
-          <h2>My Projects</h2>
-          <div class="projects">
-            <!-- Project boxes -->
-            <div class="project-box">
-              <h3>BestplugNL (Still in development)</h3>
-              <h4>HTML CSS JAVASCRIPT</h4>
-              <p>
-                On this dutch clothing website you can view and explore an
-                extensive collection of clothing items. If you are interested in
-                a specific item, you can easily place an order by simply calling
-                the telephone number provided. This offers a personal and direct
-                way to order your favorite clothing. With a focus on telephone
-                orders, we strive to provide a personalized shopping experience
-                that meets the needs of our customers. (Its for mobile and only
-                by the page clothes can you click on shoes)
-              </p>
-              <br />
-              <a href="./bestplugnl/index.html">Click here</a>
-            </div>
-            <div class="project-box">
-              <h3>Random Password Generator</h3>
-              <h4>HTML CSS JAVASCRIPT</h4>
-              <p>
-                A random password generator is a great way to generate strong
-                passwords that are difficult for others to guess, yet easy for
-                you to remember. This generator offers the ability to adjust the
-                password length between 1 and 128 characters is great, as it
-                gives users the flexibility to create passwords that meet the
-                requirements of different online platforms.
-              </p>
-              <br />
-              <a href="../password_generator/index.html">Click here</a>
-            </div>
-            <div class="project-box">
-              <h3>SDG Scantool</h3>
-              <h4>HTML CSS PHP JAVASCRIPT</h4>
-              <p>
-                This is a tool i created on my internschip at IBI2-Institute for
-                sustainable transitions & biomimicry innovations. This tool is
-                designed to help companies to see how they are doing on the
-                SDG's. IBI2 uses this tool to make reports for companies and
-                gives them advise on how they could improve to the SDG standart
-                of the EU. In this tool you can create reports, see previous
-                ones and print the output. (you cant login.)
-              </p>
-              <br />
-              <a href="https://sdg-scantool.ibi2.nl/index.php">Click here</a>
-            </div>
-
-            <!-- <div class="project-box">
-              <h3>Project 3</h3>
-              <h4>HTML CSS JAVASCRIPT</h4>
-              <p>
-                A random password generator is a great way to generate strong
-                passwords that are difficult for others to guess, yet easy for
-                you to remember. This generator offers the ability to adjust the
-                password length between 1 and 128 characters is great, as it
-                gives users the flexibility to create passwords that meet the
-                requirements of different online platforms.
-              </p>
-              <br />
-              <a href="#">Learn More</a>
-            </div>
-            <div class="project-box">
-              <h3>Project 3</h3>
-              <h4>HTML CSS JAVASCRIPT</h4>
-              <p>
-                A random password generator is a great way to generate strong
-                passwords that are difficult for others to guess, yet easy for
-                you to remember. This generator offers the ability to adjust the
-                password length between 1 and 128 characters is great, as it
-                gives users the flexibility to create passwords that meet the
-                requirements of different online platforms.
-              </p>
-              <br />
-              <a href="#">Learn More</a>
-            </div>
-            <div class="project-box">
-              <h3>Project 3</h3>
-              <h4>HTML CSS JAVASCRIPT</h4>
-              <p>
-                A random password generator is a great way to generate strong
-                passwords that are difficult for others to guess, yet easy for
-                you to remember. This generator offers the ability to adjust the
-                password length between 1 and 128 characters is great, as it
-                gives users the flexibility to create passwords that meet the
-                requirements of different online platforms.
-              </p>
-              <br />
-              <a href="#">Learn More</a>
-            </div> -->
-            <!-- Add more project boxes as needed -->
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="taal">
-          <div class="about-text">
-            <h2>Programming languages I have worked with</h2>
-            <div class="languages">
-              <!-- Voeg hier de foto's van de programmeertalen toe -->
-              <img src="./images/logo_html.png" alt="Programmeertaal 1" />
-              <img src="./images/css-logo.png" alt="Programmeertaal 2" />
-              <img
-                src="./images/php-1-logo-png-transparent.png"
-                alt="Programmeertaal 2"
-              />
-              <img src="./images/mysql-logo-1.png" alt="Programmeertaal 2" />
-              <img src="./images/JavaScript-logo.png" alt="Programmeertaal 2" />
-              <img src="./images/python-logo-2.png" alt="Programmeertaal 2" />
-              <img
-                src="./images/63065002cd563e1cd1cead28_eaadfe64.png"
-                alt="Programmeertaal 2"
-              />
-
-              <!-- Voeg zoveel foto's toe als nodig -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="contact-text">
-          <h2>Contact Me</h2>
-
-          <div class="wrapper">
-            <div class="icon-facebook">
-              <div class="tooltip">Facebook</div>
-              <a href="https://www.facebook.com/tayfun.cavdar.520"
-                ><i class="fab fa-facebook" style="font-size: 30px"></i
-              ></a>
-            </div>
-            <div class="icon-twitter">
-              <div class="tooltip">Mail</div>
-              <a
-                href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=tayfuncavdar2004@gmail.com"
-                style="font-size: 23px"
-                ><i class="fa fa-envelope-open"></i
-              ></a>
-            </div>
-            <div class="icon-instagram">
-              <div class="tooltip">Instagram</div>
-              <a href="https://www.instagram.com/tayfun.c19/"
-                ><i class="fab fa-instagram" style="font-size: 30px"></i
-              ></a>
-            </div>
-            <div class="icon-github">
-              <div class="tooltip">GitHub</div>
-              <a href="https://github.com/Rockyc19"
-                ><i class="fab fa-github" style="font-size: 30px"></i
-              ></a>
-            </div>
-            <div class="icon-linkedin">
-              <div class="tooltip">LinkedIn</div>
-              <a href="https://www.linkedin.com/in/tayfun-cavdar-967415226/"
-                ><i class="fab fa-linkedin" style="font-size: 30px"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <script>
-        const text =
-          "Hi, As a software development student at Gilde Roermond, I mainly work with PHP and JavaScript. PHP allows me to build dynamic web applications and retrieve data from databases, while JavaScript allows me to add interactive elements and dynamic content to my projects. My experience with these languages grows with every project I tackle, and I'm always looking for new ways to improve my skills and learn more about the possibilities they bring to software development.";
-        let index = 0;
-
-        let typingCompleted = false;
-
-        function type() {
-          if (!typingCompleted && index < text.length) {
-            document.getElementById("text").innerHTML += text.charAt(index);
-            index++;
-            setTimeout(type, 30); // Vertraag de snelheid hier door de tijd aan te passen
-          } else {
-            typingCompleted = true;
-            // Verwijder de cursor na het voltooien van het typen
-            document.getElementById("text").style.borderRight = "none";
-          }
-        }
-
-        function changeLanguage() {
-  const textEnglish = "Hi, As a software development student at Gilde Roermond, I mainly work with PHP and JavaScript. PHP allows me to build dynamic web applications and retrieve data from databases, while JavaScript allows me to add interactive elements and dynamic content to my projects. My experience with these languages grows with every project I tackle, and I'm always looking for new ways to improve my skills and learn more about the possibilities they bring to software development.";
-
-  const textDutch = "Hallo, Als student Software Development aan Gilde Roermond werk ik voornamelijk met PHP en JavaScript. PHP stelt me in staat dynamische webapplicaties te bouwen en gegevens uit databases op te halen, terwijl JavaScript me in staat stelt interactieve elementen en dynamische inhoud aan mijn projecten toe te voegen. Mijn ervaring met deze talen groeit met elk project dat ik aanpak, en ik ben altijd op zoek naar nieuwe manieren om mijn vaardigheden te verbeteren en meer te leren over de mogelijkheden die ze bieden voor softwareontwikkeling.";
-
-  // Selecteer de tekstcontainer
-  const textContainer = document.getElementById("text");
-
-  // Controleer de huidige taal en update de tekst dienovereenkomstig
-  if (!typingCompleted && index < text.length) {
-    const currentLanguage = isDutch ? textDutch : textEnglish;
-    textContainer.innerHTML += currentLanguage.charAt(index);
-    index++;
-    setTimeout(type, 30); // Vertraag de snelheid hier door de tijd aan te passen
-  } else {
-    typingCompleted = true;
-    // Verwijder de cursor na het voltooien van het typen
-    textContainer.style.borderRight = "none";
-  }
-}
-
-
-
-        window.onload = function () {
-          type();
-        };
-
-        document
-          .getElementById("see-more")
-          .addEventListener("click", function () {
-            document
-              .getElementById("contact")
-              .scrollIntoView({ behavior: "smooth" });
-          });
-      </script>
-
-      <script>
-        let isDutch = false;
-
-        function changeLanguage() {
-          if (!isDutch) {
-            // Voer de functie uit om de taal naar het Nederlands te veranderen
-            changeToDutch();
-          } else {
-            // Engelse vertalingen terugzetten
-            document.querySelector(".about h2").innerText = "About Me";
-            document.querySelector(".about button").innerText = "Contact Me";
-
-            document.querySelector(
-              ".projects .project-box:nth-child(2) h3"
-            ).innerText = "Random Password Generator";
-            document.querySelector(
-              ".projects .project-box:nth-child(2) p"
-            ).innerText =
-              "A random password generator is a great way to generate strong passwords that are difficult for others to guess, yet easy for you to remember. This generator offers the ability to adjust the password length between 1 and 128 characters is great, as it gives users the flexibility to create passwords that meet the requirements of different online platforms.";
-
-            document.querySelector(
-              ".projects .project-box:nth-child(1) h3"
-            ).innerText = "BestplugNL (Still in development)";
-            document.querySelector(
-              ".projects .project-box:nth-child(1) p"
-            ).innerText =
-              "On this dutch clothing website you can view and explore an extensive collection of clothing items. If you are interested in a specific item, you can easily place an order by simply calling the telephone number provided. This offers a personal and direct way to order your favorite clothing. With a focus on telephone orders, we strive to provide a personalized shopping experience that meets the needs of our customers. (Its for mobile and only by the page clothes can you click on shoes)";
-
-            document.querySelector(".cv h2").innerText = "CV";
-            document.querySelector(".cv p").innerText =
-              "Here you can download my CV. I will keep this up-to-date with all the new things I do and learn.";
-            document.querySelector("#downloadButton .button_text").innerText =
-              "Download Now";
-
-            document.querySelector(".projects h2").innerText = "My Projects";
-
-            document.querySelector(".taal h2").innerText =
-              "Programming languages I have worked with";
-
-            document.querySelector(".about h2").innerText = "About Me";
-            document.querySelector(".about button").innerText = "Contact Me";
-            document.getElementById("text").innerText =
-              "Hi, As a software development student at Gilde Roermond, I mainly work with PHP and JavaScript. PHP allows me to build dynamic web applications and retrieve data from databases, while JavaScript allows me to add interactive elements and dynamic content to my projects. My experience with these languages grows with every project I tackle, and I'm always looking for new ways to improve my skills and learn more about the possibilities they bring to software development.";
-
-            document.querySelector("#contact h2").innerText = "Contact Me";
-
-            document.querySelector(
-              ".projects .project-box:nth-child(3) p"
-            ).innerText =
-              "This is a tool i created on my internschip at IBI2-Institute for sustainable transitions & biomimicry innovations. This tool is designed to help companies to see how they are doing on the SDG's. IBI2 uses this tool to make reports for companies and gives them advise on how they could improve to the SDG standart of the EU. In this tool you can create reports, see previous ones and print the output. (you cant login).";
-
-            document.querySelector(
-              ".projects .project-box:nth-child(2) p"
-            ).innerText =
-              "A random password generator is a great way to generate strong passwords that are difficult for others to guess, yet easy for you to remember. This generator offers the ability to adjust the password length between 1 and 128 characters is great, as it gives users the flexibility to create passwords that meet the requirements of different online platforms.";
-          }
-          // Keer de waarde van isDutch om
-          isDutch = !isDutch;
-        }
-
-        // Function to change language to Dutch
-        function changeToDutch() {
-          // Stop de typende animatie
-          index = text.length;
-          typingCompleted = true;
-
-          // About section
-          document.querySelector(".about h2").innerText = "Over mij";
-          document.querySelector(".about button").innerText = "Neem contact op";
-
-          document.querySelector(
-            ".projects .project-box:nth-child(2) h3"
-          ).innerText = "Willekeurige Wachtwoordgenerator";
-          document.querySelector(
-            ".projects .project-box:nth-child(2) p"
-          ).innerText =
-            "Een wachtwoordgenerator is een geweldige manier om sterke wachtwoorden te genereren die moeilijk te raden zijn voor anderen, maar gemakkelijk te onthouden zijn voor jou. Deze generator biedt de mogelijkheid om de wachtwoordlengte tussen 1 en 128 tekens aan te passen, wat geweldig is omdat het gebruikers de flexibiliteit geeft om wachtwoorden te maken die voldoen aan de eisen van verschillende online platforms.";
-            
-
-          // Projects section (specifically the BestplugNL paragraph)
-          document.querySelector(
-            ".projects .project-box:nth-child(1) h3"
-          ).innerText = "BestplugNL (Nog in ontwikkeling)";
-          document.querySelector(
-            ".projects .project-box:nth-child(1) p"
-          ).innerText =
-            "Op deze Nederlandse kledingwebsite kunt u een uitgebreide collectie kledingstukken bekijken en verkennen. Als u geïnteresseerd bent in een specifiek item, kunt u eenvoudig een bestelling plaatsen door eenvoudigweg het verstrekte telefoonnummer te bellen. Dit biedt een persoonlijke en directe manier om uw favoriete kleding te bestellen. Met de focus op telefonische bestellingen streven we ernaar een gepersonaliseerde winkelervaring te bieden die voldoet aan de behoeften van onze klanten. (Het is voor mobiel en alleen op de kledingpagina kun je op schoenen klikken)";
-
-          // CV section
-          document.querySelector(".cv h2").innerText = "CV";
-          document.querySelector(".cv p").innerText =
-            "Hier kunt u mijn CV downloaden. Ik zal dit up-to-date houden met alles wat ik doe en leer.";
-          document.querySelector("#downloadButton .button_text").innerText =
-            "Download nu";
-
-          // Projects section
-          document.querySelector(".projects h2").innerText = "Mijn Projecten";
-
-          // Programming languages section
-          document.querySelector(".taal h2").innerText =
-            "Programmeertalen waarmee ik heb gewerkt";
-
-          // About section
-          document.querySelector(".about h2").innerText = "Over mij";
-          document.querySelector(".about button").innerText = "Neem contact op";
-          document.getElementById("text").innerText =
-            "Hallo, Als student Software Development aan Gilde Roermond werk ik voornamelijk met PHP en JavaScript. PHP stelt me in staat dynamische webapplicaties te bouwen en gegevens uit databases op te halen, terwijl JavaScript me in staat stelt interactieve elementen en dynamische inhoud aan mijn projecten toe te voegen. Mijn ervaring met deze talen groeit met elk project dat ik aanpak, en ik ben altijd op zoek naar nieuwe manieren om mijn vaardigheden te verbeteren en meer te leren over de mogelijkheden die ze bieden voor softwareontwikkeling.";
-            document.querySelector('.projects .project-box:nth-child(3) a').innerText = "Klik hier";
-            document.querySelector('.projects .project-box:nth-child(2) a').innerText = "Klik hier";
-            document.querySelector('.projects .project-box:nth-child(1) a').innerText = "Klik hier";
-
-
-
-          // Contact section
-          document.querySelector("#contact h2").innerText = "Neem contact op";
-
-          // Projects section (specifically the SDG Scantool paragraph)
-          document.querySelector(
-            ".projects .project-box:nth-child(3) p"
-          ).innerText =
-            "Dit is een tool die ik heb gemaakt tijdens mijn stage bij IBI2-Instituut voor Duurzame Transities & Biomimicry Innovations. Deze tool is ontworpen om bedrijven te helpen zien hoe ze presteren op de SDG's. IBI2 gebruikt deze tool om rapporten voor bedrijven te maken en hen advies te geven over hoe ze kunnen voldoen aan de SDG-standaard van de EU. Met deze tool kunt u rapporten maken, eerdere bekijken en de uitvoer afdrukken. (u kunt niet inloggen).";
-
-          // Projects section (specifically the Random Password Generator paragraph)
-          document.querySelector(
-            ".projects .project-box:nth-child(2) p"
-          ).innerText =
-            "Een wachtwoordgenerator is een geweldige manier om sterke wachtwoorden te genereren die moeilijk te raden zijn voor anderen, maar gemakkelijk te onthouden zijn voor jou. Deze generator biedt de mogelijkheid om de wachtwoordlengte tussen 1 en 128 tekens aan te passen, wat geweldig is omdat het gebruikers de flexibiliteit geeft om wachtwoorden te maken die voldoen aan de eisen van verschillende online platforms.";
-        }
-
-        // Voeg een klikgebeurtenis toe aan de taalwisselknop
-        document
-          .getElementById("changeLanguageButton")
-          .addEventListener("click", function () {
-            changeLanguage();
-          });
-      </script>
-
-      <script>
-        const switchIcon = document.getElementById("changeLanguageButton");
-
-        switchIcon.addEventListener("click", function () {
-          // Wissel de "active" klasse op het switchIcon element
-          switchIcon.classList.toggle("active");
-        });
-      </script>
     </section>
+
+    <section class="about-me">
+      <!-- Remove the incorrect closing </p> tag -->
+      <div class="cards">
+        <div class="card animation">
+          <img src="./assets/skills/react.png" alt="" class="reactImg" />
+          <p class="title">React Js</p>
+        </div>
+        <div class="card animation">
+          <img
+            src="./assets/skills/php-1-logo-png-transparent.png"
+            alt=""
+            class="php"
+          />
+          <p class="title">PHP</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/python-logo-2.png" alt="" class="python" />
+          <p class="title">Python</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/js.png" alt="" class="js" />
+          <p class="title">Javascript</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/logo_html.png" alt="" class="htmlImg" />
+          <p class="title">Html</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/mysql-logo-1.png" alt="" class="mysql" />
+          <p class="title">Mysql</p>
+        </div>
+        <div class="card animation">
+          <img
+            src="./assets/skills/198-1984828_java-icon-transparent-hd-png-download.png"
+            alt=""
+            class="java"
+          />
+          <p class="title">Java</p>
+        </div>
+        <div class="card animation">
+          <img
+            src="./assets/skills/63065002cd563e1cd1cead28_eaadfe64.png"
+            alt=""
+            class="c"
+          />
+          <p class="title">C#</p>
+        </div>
+        <div class="card animation">
+          <img src="./assets/skills/css-logo.png" alt="" class="cssImg" />
+          <p class="title">Css</p>
+        </div>
+        <div class="card animation">
+          <img
+            src="./assets/skills/wordpress_PNG31.png"
+            alt=""
+            class="wordpress"
+          />
+          <p class="title">Wordpress</p>
+        </div>
+      </div>
+    </section>
+    <section class="time-line-section">
+      
+      <div class="time-line-content">
+        <div class="heading-description">
+          <a href="#projection" class="btn1">Go to My Projects</a>
+          <h1 class="time-line-subheading">My Experience</h1>
+        </div>
+        <div class="timeline">
+          <div class="line"></div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Year 1</h2>
+              <p class="content-timeline-description">
+                In my first year, I started the Software Developer program at
+                MBO level 4. Prior to this, I had no experience with coding, so
+                everything was entirely new to me. The first half of the year
+                was a combined class of Software Development and ICT Management,
+                focusing mainly on theory, including HTML and CSS. In the second
+                half, I was introduced to PHP and tasked with creating a time
+                tracking system where different roles had to be assigned to the
+                appropriate users. This was quite a challenging project for me
+                at the time, as I had zero prior experience.
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Year 2 (First half)</h2>
+              <p class="content-timeline-description">
+                In my second year, we were introduced to a new programming
+                language: C#. Our main project was to develop a point-of-sale
+                (POS) system for a restaurant. We were divided into groups,
+                which required us to learn how to collaborate effectively. We
+                used tools like Trello for project management and held daily
+                stand-ups to stay aligned. Each team member had their own
+                responsibilities, and my role was to develop the POS system
+                itself. <br />
+                <br />
+                I had to ensure that customers could make payments, employees'
+                details could be accessed, working hours were visible, inventory
+                management was integrated, and notifications from tables were
+                received and displayed. It was a fun and engaging project, but
+                it also taught me the importance of teamwork, as everything had
+                to work seamlessly together. In the end, we delivered the
+                project and presented it to the restaurant, and they were
+                impressed with our work.
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Year 2 (Second Half)</h2>
+              <p class="content-timeline-description">
+                In the second half of my second year, we started our
+                internships. I interned at IBI², an organization that integrates
+                biomimicry—drawing inspiration from nature—to create sustainable
+                solutions for sectors like agriculture, construction, and
+                transportation. They focus on holistic approaches, such as the
+                Blue Economy, which promotes eco-friendly business models and
+                technologies that turn scarcity into abundance while respecting
+                natural ecosystems. IBI² offers services like sustainability
+                assessments (QuickScans) and runs the Futures Academy, where
+                participants learn about sustainability, biomimicry, and
+                building resilient business models. This was my first
+                internship, and to be honest, it wasn’t the best experience. As
+                second-year students, we were given assignments that were too
+                advanced for our skill level. Additionally, our internship
+                supervisor often hinted that our internship could be rejected if
+                we expressed doubts about successfully completing the tasks.
+                <br />
+                <br />
+
+                Our main task was to develop an improved version of their
+                QuickScan tool, making it faster and more efficient. The tool I
+                created during my internship helps companies evaluate their
+                performance on the Sustainable Development Goals (SDGs). IBI²
+                uses this tool to generate reports for businesses and provide
+                recommendations on how they can align with the SDG standards set
+                by the EU. The tool allows users to create reports, review
+                previous ones, and print outputs. Despite the challenges,
+                completing this project was a valuable learning experience.
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Year 3 (First half)</h2>
+              <p class="content-timeline-description">
+                In my third year, we had a significant workload compared to the
+                previous years. One of the highlights was learning Python from
+                one of our instructors, followed by a project where we had to
+                display real-time weather, traffic, train schedules, and news
+                updates on a TV screen. My specific task was to showcase the
+                weather using an API. I initially started working on this in
+                JavaScript, and it was a challenging project because it relied
+                heavily on the data provided by the API. My goal was to display
+                the weather for the entire week, with a new day being added
+                daily and staying up to date. However, the first API I used
+                could only show the weather for the current day, which didn’t
+                meet my expectations. After some searching, I found another API
+                that provided the required data, and I was able to achieve my
+                goal. <br />
+                <br />Unfortunately, teamwork during this project was not ideal.
+                Out of the blue, the team decided to switch to React, which
+                meant I had to rewrite the entire weather API functionality in
+                React. This was challenging at first since React was new to me.
+                However, I quickly adapted, and in the end, we managed to create
+                a functional and polished app.
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Year 3 (Second Half)</h2>
+              <p class="content-timeline-description">
+                The second half of the school year was focused on preparing for
+                our exams. My project group consisted of friends, which had its
+                pros and cons. While working on one of the projects, one team
+                member was unable to deliver their part on time. As a result, I
+                had to step in and complete their portion last-minute to ensure
+                that we still had a functioning project to present. The
+                assignment involved creating a system for reserving rooms or
+                offices. In a short amount of time, I managed to develop the
+                majority of the project. I implemented features such as: <br />
+                <br />
+
+                Different user roles (e.g., admin, staff). <br />
+                <br />
+                A secure login system with hashed passwords. <br />
+                <br />
+                Separate pages for admin and staff members. <br />
+                <br />
+                Functionality to create, edit, and delete rooms,companies,
+                contacts, and employees. <br />
+                <br />
+                A dashboard to view active and inactive rooms, including
+                detailed descriptions such as the number of tables, seating
+                capacity, available TVs, and other details. <br />
+                <br />
+                We were a team of three, but I ended up doing more than half of
+                the work. Despite the challenges, I made sure we delivered a
+                complete and functional system.
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Year 3 (Second Half)</h2>
+              <p class="content-timeline-description">
+                During the final part of year 3, we were given additional
+                assignments and participated in a special program at Zuyd
+                University of Applied Sciences. This program was designed to
+                shorten the duration of studies for those who planned to
+                continue their education there. As part of this program, we
+                completed several assignments, such as creating a "Hangman"
+                game. I added an extra feature where a player could play solo
+                and receive random words from an API. Although I successfully
+                completed the program and earned the option for a shortened
+                curriculum at Zuyd, I ultimately decided not to pursue it.
+                <br />
+                <br />
+
+                When exam season arrived, we were tasked with completing a major
+                project over one week. The process was as follows: Day 1: We
+                started by analyzing a provided text to extract user stories,
+                acceptance criteria, and the project goal. Day 2: This day
+                focused on designing sketches and creating an Entity
+                Relationship Diagram (ERD) for the database. I also prepared a
+                use case diagram, an activity diagram, and outlined the coding
+                conventions. Our team ensured that the sketches, database
+                design, and code conventions aligned well. Day 3–5: Coding began
+                on the third day, and we received the finalized database and
+                user stories from the instructors. There were three levels of
+                difficulty (A, B, and C), and I was given the hardest version
+                (confirmed by the instructor). <br />
+                <br />
+
+                Exam Project Details The project revolved around a scheduling
+                and resource management system for a driving school. These were
+                the user stories I worked on: Login System: Implemented a secure
+                system for logging in. <br />
+                <br />
+                Car Management: Allowed the owner to add, edit, and delete cars
+                to manage the fleet. <br />
+                <br />
+                Time Block Management: Enabled the owner to add time blocks for
+                scheduling lessons and planning instructor availability.<br />
+                <br />
+                Resource Allocation: Developed functionality to assign time
+                blocks to instructors and cars for lesson scheduling and
+                resource management. <br />
+                <br />
+                Usage Monitoring: Created a feature to provide an overview of
+                car usage within a specific period.<br />
+                <br />
+                Instructor Availability Overview: Tasked with displaying a daily
+                and weekly summary of instructor availability
+                (busy/available/unavailable). <br />
+                <br />
+
+                Unfortunately, due to time constraints, I couldn't complete this
+                feature. Despite the tight deadline, I completed all the tasks
+                except the last one. The final project was submitted and
+                presented successfully. A week later, I received the news that I
+                had passed the exam. This was a challenging but rewarding
+                experience, and I was proud of what I achieved in such a short
+                timeframe.
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Year 3 (Second Half)</h2>
+              <p class="content-timeline-description">
+                This was not the end of the school year, as we still had two
+                more assignments to complete. One of the assignments allowed us
+                to choose from three different projects, and we decided to work
+                on the audiometer. This project was developed for a client
+                seeking a tool to assess individuals' hearing capabilities. The
+                audiometer allows users to play beep sounds at various
+                frequencies and volumes to evaluate hearing, primarily targeting
+                children. The results are displayed in a detailed graph,
+                enabling the client to create customized music that supports
+                optimal auditory development for each individual. <br />
+                <br />
+
+                We were also required to complete a final project, with the
+                condition that it had to be innovative. This meant using a
+                programming language that we had rarely or never used before,
+                along with a database. I chose to work with JavaScript and a
+                MySQL database. For my project, I decided to create a 2D
+                fighting game with different characters. These characters were
+                based on my friends, with their faces incorporated into the
+                game. It was an enjoyable project where players could pick up
+                power-ups, view a health bar, and enjoy music and sound effects.
+                Additionally, the database tracked the win condition. This
+                marked the end of my third school year.
+              </p>
+            </div>
+          </div>
+          <div class="time-line-description">
+            <div class="mini-circle"></div>
+            <div class="content">
+              <h2 class="content-timeline-title">Year 4</h2>
+              <p class="content-timeline-description">
+                In the fourth year, I only worked during the first half of the
+                year, after which I would be done. This year, we had to go on an
+                internship. During the internship, I had to attend the Fontys
+                University of Applied Sciences in Venlo every Wednesday for a
+                program related to an accelerated academic year. As a result,
+                sometimes I was overwhelmed with a heavy workload, but you can’t
+                keep throwing sixes all the time. <br> <br>
+                 
+                I did my internship at
+                Aandachttrekkers in Oostrum. Based in Oostrum, it is a dynamic
+                full-service agency specializing in creative advertising and
+                sign production. Their expertise spans three core areas: concept
+                & design, digital communication, and advertising production.
+                They offer services such as logo and house style design, website
+                development, vehicle and building signage, digital signage, and
+                print materials like banners, posters, and exhibition displays. <br> <br>
+
+                In the first few weeks, I mainly worked with Prodiz Memoria,
+                where I had to fix a few bugs and didn’t have much else to do.
+                Prodiz Memoria is a service that allows users to create
+                personalized video tributes for funeral services. It makes it
+                easy to collect media such as photos, videos, and music through
+                a user-friendly platform that can be accessed from both
+                computers and mobile devices. The service automatically
+                synchronizes the media with accompanying music, simplifying the
+                process of crafting a meaningful and unique presentation for a
+                funeral ceremony. <br> <br>
+                
+                Afterward, I received my first real
+                assignment, which was to help with the development of a new
+                website for Aandachttrekkers using WordPress and Slider
+                Revolution. However, I quickly realized that this style of work
+                wasn’t my preference. I communicated this to the owner, but of
+                course, I continued with WordPress because I never give up. He
+                also informed me that there would be tasks I might not find
+                interesting, but they still had to be completed. I told him I
+                preferred working with plain code rather than CMS. A few weeks
+                later, I received a new assignment: the orifice calculator. <br> <br>
+                
+                The
+                orifice calculator assists in selecting the optimal orifice size
+                and material to ensure precise and efficient cutting. It helps
+                maximize tool lifespan and minimize downtime. These orifices are
+                widely used in industries such as aerospace, medical device
+                manufacturing, and custom fabrication. Additionally, DD
+                Technologies offers diamond orifices that are globally
+                recognized by leading OEMs for their durability and superior
+                performance. The calculator was a huge success at the trade
+                show, as the company mentioned. It was such a success that the
+                owner requested an expansion because there was significant
+                demand to adjust the currency. I was excited to hear that the
+                owner was impressed with my work on the calculator, and I
+                received praise from my business owner.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projection" class="projection">
+      <h1 class="projection-title">My Projects</h1>
+      <div class="projections">
+        <div class="projection-item">
+          <!-- <img
+            src="./assets/projections/project1.png"
+            class="projection-img"
+            alt=""
+          /> -->
+          <h2 class="projection-item-title">BestplugNL</h2>
+          <p class="projection-item-description">
+            On this dutch clothing website you can view and explore an extensive
+            collection of clothing items. If you are interested in a specific
+            item, you can easily place an order by simply calling the telephone
+            number provided. This offers a personal and direct way to order your
+            favorite clothing. With a focus on telephone orders, we strive to
+            provide a personalized shopping experience that meets the needs of
+            our customers. (Its for mobile and only by the page clothes can you
+            click on shoes)
+          </p>
+          <a href="./bestplugnl/index.html" class="btn">See Project</a>
+        </div>
+        <hr class="project-divider" />
+        <div class="projection-item">
+          <!-- <img
+            src="./assets/projections/project2.png"
+            class="projection-img"
+            alt=""
+          /> -->
+          <h2 class="projection-item-title">SDG Scantool</h2>
+          <p class="projection-item-description">
+            This is a tool i created on my internschip at IBI2-Institute for
+            sustainable transitions & biomimicry innovations. This tool is
+            designed to help companies to see how they are doing on the SDG's.
+            IBI2 uses this tool to make reports for companies and gives them
+            advise on how they could improve to the SDG standart of the EU. In
+            this tool you can create reports, see previous ones and print the
+            output. (you cant login.)
+          </p>
+          <a href="https://sdg-scantool.ibi2.nl/index.php" class="btn"
+            >See Project</a
+          >
+        </div>
+        <hr class="project-divider" />
+        <div class="projection-item">
+          <!-- <img
+            src="./assets/projections/project3.png"
+            class="projection-img"
+            alt=""
+          /> -->
+          <h2 class="projection-item-title">Orifice Calculator</h2>
+          <p class="projection-item-description">
+            The calculator assists in selecting the optimal orifice size and
+            material to ensure precise and efficient cutting. This helps
+            maximize tool lifespan and minimize downtime. These orifices are
+            widely used in industries such as aerospace, medical device
+            manufacturing, and custom fabrication. Additionally, DD Technologies
+            offers diamond orifices that are globally recognized by leading OEMs
+            for their durability and superior performance.
+          </p>
+          <a
+            href="https://www.dd-technologies.com/products/orifices/calculator"
+            class="btn"
+            >See Project</a
+          >
+        </div>
+        <hr class="project-divider" />
+        <div class="projection-item">
+          <!-- <img
+            src="./assets/projections/project4.png"
+            class="projection-img"
+            alt=""
+          /> -->
+          <h2 class="projection-item-title">Audiometer</h2>
+          <p class="projection-item-description">
+            This project was developed for a client seeking a tool to assess
+            individuals' hearing capabilities. The Audiometer allows users to
+            play beep sounds at various frequencies and volumes to evaluate
+            hearing, primarily targeting children. The results are displayed in
+            a comprehensive graph, enabling the client to create customized
+            music that supports optimal auditory development for each
+            individual.
+          </p>
+          <a href="#" class="btn" onclick="openPopup('project4', event)"
+            >See Project</a
+          >
+        </div>
+
+        <!-- Popup structure -->
+        <div id="project4-popup" class="popup">
+          <div class="popup-content">
+            <span class="close" onclick="closePopup('project4')">&times;</span>
+            <h2>Audiometer</h2>
+            <div class="popup-slider">
+              <img
+                src="./assets/links/black-audiogram.png"
+                alt="Detail 1"
+                class="popup-slide"
+              />
+              <img
+                src="./assets/links/white-audiogram.png"
+                alt="Detail 2"
+                class="popup-slide"
+              />
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-text">
+        <h2>Contact Me</h2>
+        <div class="wrapper">
+          <div class="icon-facebook">
+            <div class="tooltip">Facebook</div>
+            <a href="https://www.facebook.com/tayfun.cavdar.520">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+          <div class="icon-twitter">
+            <div class="tooltip">Mail</div>
+            <a
+              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=tayfuncavdar2004@gmail.com"
+            >
+              <i class="fa fa-envelope-open"></i>
+            </a>
+          </div>
+          <div class="icon-instagram">
+            <div class="tooltip">Instagram</div>
+            <a href="https://www.instagram.com/tayfun.c19/">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div class="icon-github">
+            <div class="tooltip">GitHub</div>
+            <a href="https://github.com/Rockyc19">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div class="icon-linkedin">
+            <div class="tooltip">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/tayfun-cavdar-967415226/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
   </body>
 </html>

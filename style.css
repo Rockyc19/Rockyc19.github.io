@@ -1,532 +1,608 @@
-@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
-
-body {
-    font-family: "Reddit Mono", monospace;
-    background-color: #191919;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-body {
-    font-family: 'Reddit Mono', monospace;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap');
 
 
-/* General styles */
 * {
     margin: 0;
     padding: 0;
-    font-family: "Reddit Mono", monospace;
     box-sizing: border-box;
 }
 
-/* Example of a specific element with the same font */
-h1, h2, h3, h4, h5, h6, p {
-    font-family: "Reddit Mono", monospace;
-}
-
-/* Media query to ensure font on mobile devices */
-@media only screen and (max-width: 768px) {
-    body {
-        font-family: "Reddit Mono", monospace;
-    }
-}
-
-
-/* Overige stijlen hieronder */
-
-.about, .section2 .section3 {
-    width: 100%;
-    padding: 100px 0px;
-    background-color: #191919;
+body {
+    background-color: #010115;
+    overflow-x: hidden;
    
 }
 
-.about .main, .section2 .section3 .main {
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto;
+.header {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-   
-
-}
-
-.about img {
-    height: auto;
-    width: 430px;
-}
-
-.about-text, .section2 .about-text {
-    width: 550px;
-   
-}
-
-.about-text h2, .section2 .about-text h2 {
-    color: white;
-    font-size: 35px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-   
-
-}
-
-.about-text h5, .section2 .about-text h5 {
-    color: white;
-    letter-spacing: 2px;
-    font-size: 22px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-
-}
-
-.about-text p, .section2 .about-text p {
-    color: #fff;
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    margin-bottom: 45px;
-}
-
-button#see-more {
-    background-color: #00703c; /* Groene achtergrondkleur */
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: .4s;
-}
-
-button#see-more:hover {
-    background-color: transparent;
-    border: 2px solid rgb(4, 65, 17);
-    cursor: pointer;
-}
-
-/* Mediaquery voor responsief ontwerp */
-@media only screen and (max-width: 980px) {
-    .about .main, .section2 .section3 .main {
-        flex-direction: column; /* Verticale opstelling */
-        align-items: center; /* Gecentreerd uitlijnen */
-        font-family: "Reddit Mono", monospace;    }
-
-    .about img {
-        width: 80%; /* Aangepaste breedte */
-        max-width: 1300px; /* Maximale breedte voor responsiviteit */
-        margin-bottom: 20px; /* Ruimte onder de foto */
-      
-    }
-
-    .about-text, .section2 .about-text {
-        width: 80%; /* Aangepaste breedte */
-        max-width: 600px; /* Maximale breedte voor responsiviteit */
-        
-    }
-
-    .about-text h2, .section2 .about-text h2 {
-        font-size: 40px; /* Aangepaste lettergrootte */
-        margin-bottom: 15px; /* Minder ruimte onder de naam */
-       
-    }
-
-    .about-text h5, .section2 .about-text h5 {
-        font-size: 18px; /* Aangepaste lettergrootte */
-        margin-bottom: 20px; /* Minder ruimte onder de titel */
-       
-    }
-
-    .about-text p, .section2 .about-text p {
-        font-size: 26px; /* Aangepaste lettergrootte */
-        line-height: 24px; /* Aangepaste regelhoogte */
-        margin-bottom: 30px; /* Minder ruimte onder de tekst */
-    
-    }
-
-    button#see-more {
-        margin-top: 20px; /* Ruimte boven de knop */
-    }
-}
-
-/* //section 2 */
-
-.section2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Adjust this value if needed */
-
-
-}
-  
-.cv {
-    text-align: center;
-}
-
-/* Mediaquery voor responsief ontwerp */
-@media only screen and (max-width: 980px) {
-    .cv {
-        margin-top: 50px; /* Voeg hier eventueel de gewenste marge toe */
-        margin-right: -130px; /* Voeg hier eventueel de gewenste marge toe */
-      
-
-    }
-}
-
-/* soccer*/
-.soccer {
-    background: url(http://upload.wikimedia.org/wikipedia/en/e/ec/Soccer_ball.svg);
-    background-size: 100px 100px;
-    height: 100px;
-    width: 100px;
+    justify-content: space-between;
+    place-items: center;
     position: relative;
-    -webkit-animation:roll 4.5s infinite;
-    -moz-animation:roll 4.5s infinite;
-    animation:roll 4.5s infinite;
+    background-color: #000;
+    padding: 0 10vw;
 }
+
+.logo {
+    max-width: 7vw;
+    z-index: 3;
+}
+
+.main-nav-list {
+    display: flex;
+    list-style: none;
+    z-index: 3;
+    gap: 5vw;
+}
+
+.main-nav-link {
+    color: #fffa;
+    text-decoration: none;
+    font-size: 1.8vw;
+    transition: all 0.5s;
+    font-family: "Dancing Script";
+}
+
+.main-nav-link:hover {
+    color: #fff;
+}
+
+.hero {
+    display: grid;
+    position: relative;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+    background: linear-gradient(to top, #010115, transparent);
+    z-index: 1;
+}
+
+.hero-img {
+    position: absolute;
+    width: 35vw;
+    z-index: 1;
+    margin-left: 68vw;
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-description {
+    position: absolute;
+    width: 20vw;
+    height: 10vh;
+    z-index: 2;
+    margin-top: -60vh;
+    margin-left: -40vw;
+}
+
+.hero-title {
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 400;
+    font-family: "EB Garamond";
+}
+
+.dand {
+    color: #7a31bf;
+    font-family: "Dancing Script";
+}
+
+.hero-subheading {
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 400;
+    font-family: "EB Garamond";
+    margin-left: 2.6vw;
+}
+
+.hero-model {
+    position: absolute;
+}
+
+model-viewer {
+    width: 64vw;
+    height: 95vh;
+    z-index: 1;
+}
+
+/* about me */
+
+.about-me {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: auto; /* Zorg ervoor dat de hoogte automatisch wordt aangepast */
+    position: relative;
+    padding: 10vh 10vw; /* Voeg voldoende padding toe */
+}
+
+.about-me-description {
+    width: 30vw;
+    height: 35vh;
+    position: absolute;
+    margin-left: -50vw;
+    margin-top: -50vh;
+}
+
+.introduction {
+    color: #ffffff5a;
+    font-size: 1vw;
+    padding-bottom: 2vh;
+}
+
+.about-me-title {
+    color: #fff;
+    font-size: 3.5vw;
+    font-family: "Dancing Script";
+}
+
+.about-me-subheading {
+    color: #fff;
+    font-size: 1.4vw;
+    font-weight: 400;
+    font-family: "EB Garamond";
+    line-height: 1.2;
+    padding-top: 3vh;
+}
+
+/* cards */
+
+/* animation */
+.animation {
+    opacity: 0;
+    transform: all 0.5s;
+}
+
+.showUp{
+    animation: showUp 1s;
+}
+
+@keyframes showUp {
+    0% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2vw;
+    margin-top: 5vh; /* Verlaag de marge boven de kaarten */
+}
+
+.card {
+    flex: 1 1 calc(20% - 2vw); /* 20% breedte min de gap */
+    max-width: calc(20% - 2vw); /* Zorg ervoor dat de breedte niet groter wordt dan 20% */
+    margin: 1vw 0; /* Voeg wat marge toe tussen de rijen */
+    position: relative; /* Voeg position: relative toe om de titel te positioneren */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 35vh;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 9px #fffa;
+}
+
+.card img {
+    max-width: 100%; /* Zorg ervoor dat de afbeelding niet groter is dan de card */
+    max-height: 100%; /* Zorg ervoor dat de afbeelding niet groter is dan de card */
+    height: auto; /* Behoud de aspect ratio van de afbeelding */
+}
+
+.card .title {
+    position: absolute; /* Voeg position: absolute toe om de titel te positioneren */
+    bottom: 20px; /* Plaats de titel net boven de onderkant van de card */
+    font-size: 1.5vw; /* Pas de tekstgrootte van de titel aan */
+    text-align: center;
+    width: 100%;
+}
+
+/* Specifieke aanpassingen voor bepaalde afbeeldingen */
+.reactImg,
+.php,
+.python,
+.mysql,
+.java,
+.c,
+.cssImg,
+.htmlImg,
+.wordpress,
+.js {
+    width: 60%; /* Pas de breedte aan indien nodig */
+    height: auto; /* Behoud de aspect ratio van de afbeelding */
+    z-index: 1;
+    margin-top: -2vh;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(25% - 2vw); /* 25% breedte min de gap */
+        max-width: calc(25% - 2vw); /* Zorg ervoor dat de breedte niet groter wordt dan 25% */
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        flex: 1 1 calc(33.33% - 2vw); /* 33.33% breedte min de gap */
+        max-width: calc(33.33% - 2vw); /* Zorg ervoor dat de breedte niet groter wordt dan 33.33% */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 30%;
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex: 1 1 30%;
+        max-width: 30%;
+        height: 15vh; /* Verklein de hoogte van de cards */
+        margin: 0.5vw 0; /* Verklein de marge tussen de rijen */
+    }
+
+    .card img {
+        width: 50%; /* Verklein de afbeelding binnen de card */
+    }
+
+    .card .title {
+        font-size: 1.5vw; /* Verklein de tekstgrootte van de titel */
+    }
+}
+
+/* Specifieke aanpassingen voor bepaalde afbeeldingen */
+.reactImg {
+    width: 70%;
+    z-index: 1;
+}
+
+
+
+.js {
+    width: 60%;
+    z-index: 1;
+}
+
+
+.title {
+    color: #fff;
+    position: relative;
+    font-size: 1.6vw;
+    text-align: center;
+    z-index: 10;
+    font-family: "Eb Garamond";
+    font-weight: 400;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 20vw;
+    height: 25vh;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: rotation 5s linear infinite;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0.15vw;
+    background-color: #16063a;
+    border-radius: 15px;
+}
+
+@keyframes	rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* timeline */
+
+.time-line-section {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    padding: 0 10vw;
+    background-color: #010115;
+    background-size: 100vw;
+}
+
+.time-line-content {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding-bottom: 25vh;
+}
+
+.heading-description { 
+    display: grid;
+    place-items: center;
+    margin-bottom: 10vh;
+    margin-left: -50vw;
+}
+
+.time-line-title {
+    color: #ffffff5a;
+    font-size: 1vw;
+    padding-bottom: 2vh;
+}
+
+.time-line-subheading {
+    color: #fff;
+    font-size: 3.5vw;
+    font-family: "Dancing Script";
+    margin-left: 50vw;
+}
+
+.timeline {
+    display: grid;
+    position: relative;
+    place-items: center;
+}
+
+.line {
+    position: absolute;
+    width: 0.15vw;
+    top: -7vh;
+    background-color: #fff;
+    z-index: 2;
+    box-shadow: 0 0 30px #fff;    
+}
+
+.line::before,
+.line::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1.2vw;
+    height: 2.3vh;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.line:after {
+    bottom: 0;
+}
+
+.time-line-description {
+    display: flex;
+    transform: translateX(-50%);
+    transition: 600ms ease;
+    position: relative;
+    z-index: 1;
+    margin: 1.2vh 0;
+    padding: 1vw;
+    align-items: center;
+    width: 75vw;
+    min-height: 35vh;
+    opacity: 0;
+}
+
+.time-line-description:nth-child(odd) {  
+    flex-direction: row-reverse;
+    transform: translateX(50%);
+}
+
+.mini-circle {
+    position: absolute;
+    display: block;
+    width: 1.2vw;
+    height: 2.3vh;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+}
+
+.content {
+    width: calc(50% - 2vw);
+    padding: 2vh 2vw;
+    border-radius: 5%;
+    box-shadow: 0 0 10px #fffa;
+}
+
+.show-me:nth-child(n) {
+    transform: none;
+    opacity: 1;
+}
+
+.content-timeline-title {
+    color: #fff;
+    font-size: 2.2vw;
+    font-family: "Dancing Script";
+}
+
+.content-timeline-description {
+    color: #fffa;
+    font-size: 1.2vw;
+    font-family: "EB Garamond";
+    font-weight: 400;
+    line-height: 1.2;
+    padding-top: 2vh;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .time-line-description {
+      font-size: 0.5em; /* Vergroot de tekstgrootte */
+      padding: 2vh 2vw; /* Voeg padding toe voor meer ruimte */
+      width: 90%; /* Maak de tekstvakken breder */
+    }
   
-@-moz-keyframes roll {  
-    0% {left:0px; -webkit-transform: rotate(-260deg);}
-    50% {left:400px; -webkit-transform: rotate(260deg);}
-    100% {left:0px; -webkit-transform: rotate(-260deg);}
+    .content-timeline-description {
+      font-size: 1.5em; /* Vergroot de tekstgrootte binnen de content */
+      width: 100%; /* Maak de tekstvakken breder */
+    }
+    .content-timeline-title {
+        font-size: 2em; /* Vergroot de titel */
+      }
+  }
+
+/* projection */
+
+.projection {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    padding: 10vh 10vw;
 }
-@-webkit-keyframes roll { 
-    0% {left:0px; -webkit-transform: rotate(-260deg);}
-    50% {left:400px; -webkit-transform: rotate(260deg);}
-    100% {left:0px; -webkit-transform: rotate(-260deg);}
+
+.projection:before {
+    content: "";
+    position: absolute;
+    bottom: -20vh;
+    width: 100vw;
+    height: 5vh;
+    background: linear-gradient(to top, #010115, transparent);
+    margin-left: -20vh;
+    z-index: 1;
 }
+
+/* Center the "My Projects" title */
+.projection-title {
+    color: #fff;
+    font-size: 3.5vw;
+    font-family: "Dancing Script";
+    text-align: center; /* Center the title */
+  }
   
-@keyframes roll { 
-    0% {left:0px; -webkit-transform: rotate(-260deg);}
-    50% {left:400px; -webkit-transform: rotate(260deg);}
-    100% {left:0px; -webkit-transform: rotate(-260deg);}
+  /* Make the text of the projection item description wider */ 
+  .projection-item-description {
+    color: #fffa;
+    width: 60vw; /* Increase the width */
+    font-size: 1.4vw;
+    font-family: "EB Garamond";
+    line-height: 1.2;
+    padding-top: 5vh;
+  }
+
+.projections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20vh;
 }
-  
-.world-cup {
-    color: #82AE6F;
+
+.projection-item {
+    display: grid;
+    place-items: center;
     text-align: center;
 }
 
-  /*  */
-
-  /*  */
-
-  .text-box {
-    margin-left: 44vw;
-    margin-top: 42vh;
-   
-
+.projection-img {
+    width: 25vw;
 }
 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
+.projection-item-title { 
+    color: #fff;
+    font-size: 2vw;
+    font-family: "EB Garamond";
+    font-weight: 400;
+    padding-top: 3vh;
+    line-height: 1.2;
+}
+
+.project-divider {
+    width: 50%;
+    margin: 2rem auto;
+    border: 0;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,1), rgba(255,255,255,0.2));
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+
+.btn {
+    display: grid;
+    place-items: center;
+    width: 10vw;
+    height: 5vh;
+    margin-top: 5vh;
     text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all .2s;
-    position: absolute;
+    border-radius: 15px;
+    background-color: #010115;
+    box-shadow: 0 0 50px #fffa;
+    color: #fffa;
+    font-size: 1.4vw;
+    font-family: "EB Garamond";
+    transition: all 0.5s;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgb(140, 56 ,224);
 }
 
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-    background-color: #fff;
-    color: #777;
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-   
-
-}
-
-.section {
-    margin-top: 50px;
+#contact {
+    padding: 50px 10vw;
+    background-color: #010115;
     text-align: center;
-  
-
 }
 
-.section h2 {
-    font-size: 56px;
-    margin-bottom: 60px;
-    color: #fff;
- 
-
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
- 
-
-}
-
-.project-box {
-    position: relative;
-    background-color: #00703c;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    padding: 20px;
-    max-width: 1000px;
-    width: 100%;
-    /* text-align: left; */
-    transition: transform 0.3s;
-  
-
-}
-
-.project-box:hover {
-    transform: translateY(-5px);
-}
-
-.project-box h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #fff;
- 
-
-}
-
-.project-box p {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #fff;
-   
-
-}
-
-.project-box .btn-container {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  
-
-}
-
-.project-box a {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #00703c;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
- 
-
-}
-
-.project-box a:hover {
-    background-color: #005e33;
-    transform: translateY(-3px);
-}
-
-h4 {
-    color: red;
-    font-size: 14px;
-  
-
-}
-
-.button {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    background: none;
-    color: #0f1923;
-    cursor: pointer;
-    position: relative;
-    padding: 8px;
+#contact .contact-text h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    transition: all .15s ease;
-  }
-  
-  .button::before,
-  .button::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    left: 0;
-    height: calc(50% - 5px);
-    border: 1px solid #7D8082;
-    transition: all .15s ease;
-  }
-  
-  .button::before {
-    top: 0;
-    border-bottom-width: 0;
-  }
-  
-  .button::after {
-    bottom: 0;
-    border-top-width: 0;
-  }
-  
-  .button:active,
-  .button:focus {
-    outline: none;
-  }
-  
-  .button:active::before,
-  .button:active::after {
-    right: 3px;
-    left: 3px;
-  }
-  
-  .button:active::before {
-    top: 3px;
-  }
-  
-  .button:active::after {
-    bottom: 3px;
-  }
-  
-  .button_lg {
-    position: relative;
-    display: block;
-    padding: 10px 20px;
     color: #fff;
-    background-color: #0f1923;
-    overflow: hidden;
-    box-shadow: inset 0px 0px 0px 1px transparent;
-  }
-  
-  .button_lg::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 2px;
-    background-color: #0f1923;
-  }
-  
-  .button_lg::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 4px;
-    height: 4px;
-    background-color: #0f1923;
-    transition: all .2s ease;
-  }
-  
-  .button_sl {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    left: -8px;
-    width: 0;
-    background-color: #00703c;
-    transform: skew(-15deg);
-    transition: all .2s ease;
-  }
-  
-  .button_text {
-    position: relative;
-  }
-  
-  .button:hover {
-    color: #0f1923;
-  }
-  
-  .button:hover .button_sl {
-    width: calc(100% + 15px);
-  }
-  
-  .button:hover .button_lg::after {
-    background-color: #fff;
-  }
-
-.about-text {
-    text-align: center;
-    
-
-}
-
-.languages {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.languages img {
-    margin: 40px;
-    width: 100px;
-    height: auto;
-}
-
-.taal {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 0px;
-    background-color: #191919;
 }
 
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .wrapper > div {
-    margin: 0 10px;
-}
-
-.icon-facebook,
-.icon-twitter,
-.icon-instagram,
-.icon-github,
-.icon-linkedin {
     position: relative;
     background-color: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Voeg een lichte schaduw toe */
+}
+
+.wrapper > div:hover {
+    transform: scale(1.1);
+}
+
+.wrapper > div i {
+    font-size: 1.5rem;
+    color: black;
 }
 
 .tooltip {
@@ -548,33 +624,248 @@ h4 {
     visibility: visible;
 }
 
-#contact .contact-text h2 {
-    font-size: 36px; /* Pas dit aan naar de gewenste grootte */
-    margin-bottom: 50px;
-    margin-top: -20px; /* Pas dit aan naar de gewenste verschuiving naar boven */
-  }
+@media (max-width: 768px) {
+    #contact {
+        padding: 30px 5vw;
+    }
 
-  #contact .wrapper i {
-    color: black; /* Maak de icons zwart */
-    font-size: 30px; /* Zorg dat alle iconen dezelfde grootte hebben, pas indien nodig aan */
-  }
-  
-  #contact .icon-twitter i {
-    font-size: 23px; /* Specifieke grootte voor het mail-icoon */
-  }
+    #contact .contact-text h2 {
+        font-size: 2rem;
+    }
 
-  img.round {
-    object-fit: cover; /* zorgt ervoor dat de afbeelding goed past binnen de cirkel */
-    border-radius: 25px; /* maakt de afbeelding rond */
-    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); /* voegt een schaduw toe */
+    .wrapper > div {
+        padding: 10px;
+    }
+
+    .wrapper > div i {
+        font-size: 1.2rem;
+    }
 }
 
+@media (max-width: 576px) {
+    #contact .contact-text h2 {
+        font-size: 1.5rem;
+    }
 
-      /* Stijl voor verschillende achtergronden */
-      .background1 {
-        background-color: lightblue;
-      }
-      .background2 {
-        background-color: lightgreen;
-      }
-      /* Voeg extra achtergrondstijlen toe indien nodig */
+    .wrapper > div {
+        padding: 8px;
+    }
+
+    .wrapper > div i {
+        font-size: 1rem;
+    }
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .popup-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Increased width for larger photos */
+    max-width: 900px; /* Increased max-width for larger photos */
+    text-align: center;
+    position: relative;
+  }
+  
+  .popup-slide {
+    display: none;
+    width: 100%;
+    max-height: 800px; /* Increased max-height for larger photos */
+    object-fit: contain;
+  }
+  
+  .popup-slide.active {
+    display: block;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .prev {
+    left: 0; /* Position the left arrow to the left of the photo */
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+
+/* About Me Intro Section */
+.about-me-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 10vw;
+    background-color: #010115;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .intro-container {
+    max-width: 800px;
+  }
+  
+  .intro-title {
+    font-size: 2.5vw;
+    font-family: "Dancing Script";
+    margin-bottom: 2vh;
+  }
+  
+  .intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .intro-text {
+    font-size: 1.2vw;
+    font-family: "EB Garamond";
+    line-height: 1.5;
+    flex: 1;
+    margin-right: 2vw;
+  }
+  
+  .intro-photo {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .intro-title {
+      font-size: 4vw;
+    }
+  
+    .intro-content {
+      flex-direction: column;
+    }
+  
+    .intro-text {
+      font-size: 2vw;
+      margin-right: 0;
+      margin-bottom: 2vh;
+    }
+  
+    .intro-photo {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .intro-title {
+      font-size: 5vw;
+    }
+  
+    .intro-text {
+      font-size: 2.5vw;
+    }
+  
+    .intro-photo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+
+  .hero-button {
+    display: none; /* Verberg standaard de knop */
+    position: absolute;
+    bottom: 30vh;
+    z-index: 2;
+  }
+  
+  .hero-button .btn {
+    display: grid;
+    place-items: center;
+    width: 10vw;
+    height: 5vh;
+    margin-top: 5vh;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #010115;
+    box-shadow: 0 0 50px #fffa;
+    color: #fffa;
+    font-size: 1.4vw;
+    font-family: "EB Garamond";
+    transition: all 0.5s;
+  }
+  
+  .hero-button .btn:hover {
+    background-color: #5a2391;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-button {
+      display: block; /* Toon de knop alleen wanneer de pagina responsief is */
+    }
+  }
+
+
+  .btn1 {
+    display: grid;
+    place-items: center;
+    width: 10vw;
+    height: 5vh;
+    margin-top: 5vh;
+    margin-left: 50vw; /* Voeg deze regel toe om de knop naar rechts te verplaatsen */
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #010115;
+    box-shadow: 0 0 50px #fffa;
+    color: #fffa;
+    font-size: 1.4vw;
+    font-family: "EB Garamond";
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px rgb(140, 56 ,224);
+}
